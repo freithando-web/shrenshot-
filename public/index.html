@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hope for Africa – Charity Drive</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- AUTH OVERLAY -->
+<div id="authOverlay" class="overlay">
+  <div class="auth-box">
+    <div class="auth-logo">🌍</div>
+    <h1>Hope for Africa</h1>
+    <p class="auth-subtitle">Together we can change lives</p>
+
+    <div class="tab-row">
+      <button class="tab active" onclick="showTab('login')">Login</button>
+      <button class="tab" onclick="showTab('register')">Register</button>
+    </div>
+
+    <!-- LOGIN -->
+    <form id="loginForm" class="auth-form" onsubmit="doLogin(event)">
+      <input type="email" id="loginEmail" placeholder="Email address" required />
+      <input type="password" id="loginPassword" placeholder="Password" required />
+      <button type="submit" class="btn-primary">Login</button>
+      <p id="loginError" class="error-msg"></p>
+    </form>
+
+    <!-- REGISTER -->
+    <form id="registerForm" class="auth-form hidden" onsubmit="doRegister(event)">
+      <input type="text" id="regName" placeholder="Your full name" required />
+      <input type="email" id="regEmail" placeholder="Email address" required />
+      <input type="password" id="regPassword" placeholder="Password (min 6 chars)" required />
+      <button type="submit" class="btn-primary">Create Account</button>
+      <p id="registerError" class="error-msg"></p>
+    </form>
+  </div>
+</div>
+
+<!-- MAIN APP -->
+<div id="app" class="hidden">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="nav-logo">🌍</span>
+      <span class="nav-title">Hope for Africa</span>
+    </div>
+    <div class="nav-right">
+      <span id="navUser" class="nav-user"></span>
+      <button class="btn-logout" onclick="doLogout()">Logout</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Help Build a Future for Africa's Children</h1>
+      <p>Every donation brings us closer to clean water, playgrounds, schools, and community centres for children across Africa.</p>
+      <button class="btn-donate-hero" onclick="scrollToDonate()">Donate Now</button>
+    </div>
+  </header>
+
+  <!-- TOTALS BANNER -->
+  <section class="totals-banner">
+    <div class="total-item">
+      <span class="total-value" id="totalAmount">$0</span>
+      <span class="total-label">Total Raised</span>
+    </div>
+    <div class="total-item">
+      <span class="total-value" id="totalDonors">0</span>
+      <span class="total-label">Donations</span>
+    </div>
+    <div class="total-item">
+      <span class="total-value" id="totalGoal">$300,000</span>
+      <span class="total-label">Final Goal</span>
+    </div>
+  </section>
+
+  <!-- STAGES -->
+  <section class="stages-section">
+    <h2>Our Milestones</h2>
+    <p class="stages-subtitle">See what your donations will unlock</p>
+    <div class="stages-grid" id="stagesGrid"></div>
+  </section>
+
+  <!-- OVERALL PROGRESS -->
+  <section class="progress-section">
+    <h2>Overall Progress</h2>
+    <div class="overall-bar-wrap">
+      <div class="overall-bar" id="overallBar"></div>
+    </div>
+    <p id="overallText" class="overall-text"></p>
+  </section>
+
+  <!-- DONATE FORM -->
+  <section class="donate-section" id="donateSection">
+    <h2>Make a Donation</h2>
+    <p class="donate-subtitle">100% of your donation goes directly to the children</p>
+    <form class="donate-form" onsubmit="doDonate(event)">
+      <div class="quick-amounts">
+        <button type="button" onclick="setAmount(10)">$10</button>
+        <button type="button" onclick="setAmount(25)">$25</button>
+        <button type="button" onclick="setAmount(50)">$50</button>
+        <button type="button" onclick="setAmount(100)">$100</button>
+        <button type="button" onclick="setAmount(500)">$500</button>
+      </div>
+      <input type="number" id="donateAmount" placeholder="Or enter custom amount ($)" min="1" max="50000" step="1" required />
+      <textarea id="donateMessage" placeholder="Optional message of support..." rows="3"></textarea>
+      <button type="submit" class="btn-primary btn-big">Donate Now 💛</button>
+      <p id="donateError" class="error-msg"></p>
+      <p id="donateSuccess" class="success-msg"></p>
+    </form>
+  </section>
+
+  <!-- RECENT DONATIONS -->
+  <section class="recent-section">
+    <h2>Recent Donations</h2>
+    <div id="recentList" class="recent-list"></div>
+  </section>
+
+  <footer class="footer">
+    <p>🌍 Hope for Africa Charity &nbsp;·&nbsp; Making a difference, one donation at a time</p>
+  </footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
