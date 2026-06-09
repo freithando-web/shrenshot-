@@ -22,20 +22,11 @@
 
   /* HERO */
   .hero { position: relative; height: 300px; overflow: hidden; display: flex; align-items: flex-end; }
-  .hero-dubai-night { background: linear-gradient(180deg, #0a1628 0%, #1a3a6b 30%, #0d2244 60%, #1a1a2e 100%); width:100%; height:100%; position:absolute; top:0; left:0; }
-  .hero-buildings-night { position:absolute; bottom:0; left:0; right:0; height:180px; }
-  .hero-glow { position:absolute; bottom:60px; left:50%; transform:translateX(-50%); width:300px; height:60px; background:radial-gradient(ellipse, rgba(255,200,50,0.3) 0%, transparent 70%); }
-  .hero-stars { position:absolute; top:0; left:0; right:0; height:120px; background: radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.8) 0%, transparent 100%), radial-gradient(1px 1px at 30% 15%, rgba(255,255,255,0.7) 0%, transparent 100%), radial-gradient(1px 1px at 50% 25%, rgba(255,255,255,0.9) 0%, transparent 100%), radial-gradient(1px 1px at 70% 10%, rgba(255,255,255,0.6) 0%, transparent 100%), radial-gradient(1px 1px at 85% 30%, rgba(255,255,255,0.8) 0%, transparent 100%), radial-gradient(1px 1px at 20% 35%, rgba(255,255,255,0.5) 0%, transparent 100%), radial-gradient(1px 1px at 60% 18%, rgba(255,255,255,0.7) 0%, transparent 100%); }
-  .hero-overlay { position:absolute; bottom:0; left:0; right:0; top:0; background:linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%); }
+  .hero img.hero-bg { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; object-position:center; }
+  .hero-overlay { position:absolute; bottom:0; left:0; right:0; top:0; background:linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.15) 60%, transparent 100%); }
   .hero-text { position: relative; z-index: 2; padding: 28px; color: #fff; }
-  .hero-text h2 { margin: 0 0 8px; font-size: 26px; font-weight: 900; line-height: 1.2; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,0.5); }
-  .hero-text p { margin: 0; font-size: 14px; color: rgba(255,255,255,0.85); }
-
-  .hero-day { background: linear-gradient(180deg, #87CEEB 0%, #5BA3D9 30%, #4A90D9 60%, #2E6DB4 100%); width:100%; height:100%; position:absolute; top:0; left:0; }
-  .hero-buildings-day { position:absolute; bottom:0; left:0; right:0; height:200px; }
-  .hero-sun { position:absolute; top:30px; right:80px; width:50px; height:50px; background:radial-gradient(circle, #FFF176, #FFD700); border-radius:50%; box-shadow: 0 0 30px rgba(255,215,0,0.6); }
-
-  .hero-sunset { background: linear-gradient(180deg, #FF6B35 0%, #FF8C42 20%, #FFA552 40%, #FFD700 60%, #FF6B6B 80%, #C0392B 100%); width:100%;height:100%;position:absolute;top:0;left:0; }
+  .hero-text h2 { margin: 0 0 8px; font-size: 26px; font-weight: 900; line-height: 1.2; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.6); }
+  .hero-text p { margin: 0; font-size: 14px; color: rgba(255,255,255,0.9); text-shadow: 0 1px 6px rgba(0,0,0,0.5); }
 
   /* BODY */
   .body { background: #fff; padding: 32px 28px; }
@@ -106,43 +97,7 @@
 
   <!-- Hero Night -->
   <div class="hero">
-    <div class="hero-dubai-night"></div>
-    <div class="hero-stars"></div>
-    <!-- Skyline SVG night -->
-    <svg style="position:absolute;bottom:0;left:0;right:0;width:100%;height:160px" viewBox="0 0 600 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Buildings background -->
-      <rect x="0" y="80" width="600" height="80" fill="#0d1b2a"/>
-      <rect x="20" y="60" width="30" height="80" fill="#1a2f4a"/>
-      <rect x="55" y="45" width="25" height="95" fill="#162840"/>
-      <rect x="85" y="70" width="35" height="70" fill="#1a2f4a"/>
-      <rect x="125" y="40" width="20" height="100" fill="#0f2035"/>
-      <rect x="150" y="55" width="40" height="85" fill="#1a2f4a"/>
-      <!-- Burj Khalifa -->
-      <polygon points="280,5 284,30 288,35 292,40 296,50 300,160 260,160" fill="#1e3a5f"/>
-      <rect x="260" y="50" width="40" height="110" fill="#1e3a5f"/>
-      <rect x="270" y="40" width="20" height="20" fill="#243f6b"/>
-      <rect x="275" y="20" width="10" height="25" fill="#243f6b"/>
-      <!-- Spire -->
-      <line x1="280" y1="5" x2="280" y2="0" stroke="#FFD700" stroke-width="1"/>
-      <!-- Windows lights -->
-      <rect x="265" y="55" width="4" height="3" fill="#FFD700" opacity="0.7"/>
-      <rect x="272" y="55" width="4" height="3" fill="#FFD700" opacity="0.7"/>
-      <rect x="279" y="55" width="4" height="3" fill="#FFD700" opacity="0.5"/>
-      <rect x="265" y="65" width="4" height="3" fill="#FFD700" opacity="0.6"/>
-      <rect x="272" y="65" width="4" height="3" fill="#FFD700" opacity="0.8"/>
-      <rect x="265" y="75" width="4" height="3" fill="#FFD700" opacity="0.4"/>
-      <rect x="272" y="75" width="4" height="3" fill="#FFD700" opacity="0.7"/>
-      <!-- More buildings right -->
-      <rect x="310" y="50" width="45" height="110" fill="#162840"/>
-      <rect x="360" y="65" width="30" height="95" fill="#1a2f4a"/>
-      <rect x="395" y="45" width="50" height="115" fill="#0f2035"/>
-      <rect x="450" y="60" width="35" height="100" fill="#1a2f4a"/>
-      <rect x="490" y="50" width="40" height="110" fill="#162840"/>
-      <rect x="535" y="70" width="30" height="90" fill="#1a2f4a"/>
-      <rect x="565" y="55" width="35" height="105" fill="#0f2035"/>
-      <!-- Glow at base -->
-      <ellipse cx="300" cy="155" rx="200" ry="20" fill="#FFD700" opacity="0.08"/>
-    </svg>
+    <img class="hero-bg" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85" alt="Dubai Skyline bei Nacht">
     <div class="hero-overlay"></div>
     <div class="hero-text">
       <h2>Dubai. Wo Visionen zu<br>Unternehmen werden.</h2>
@@ -205,33 +160,7 @@
 
   <!-- Hero Day -->
   <div class="hero">
-    <div class="hero-day"></div>
-    <div class="hero-sun"></div>
-    <!-- Skyline SVG day -->
-    <svg style="position:absolute;bottom:0;left:0;right:0;width:100%;height:180px" viewBox="0 0 600 180" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="120" width="600" height="60" fill="#e8f4f8"/>
-      <!-- Buildings -->
-      <rect x="0" y="80" width="40" height="100" fill="#b8d4e8"/>
-      <rect x="45" y="60" width="30" height="120" fill="#a0c0d8"/>
-      <rect x="80" y="90" width="45" height="90" fill="#b8d4e8"/>
-      <!-- Burj Khalifa day -->
-      <rect x="245" y="10" width="50" height="170" fill="#c8dde8"/>
-      <rect x="255" y="5" width="30" height="15" fill="#b0ccd8"/>
-      <rect x="263" y="0" width="14" height="10" fill="#a0bcd0"/>
-      <polygon points="270,0 274,5 266,5" fill="#a0bcd0"/>
-      <!-- Glass reflections -->
-      <rect x="248" y="20" width="8" height="60" fill="rgba(255,255,255,0.3)"/>
-      <rect x="260" y="15" width="6" height="80" fill="rgba(255,255,255,0.2)"/>
-      <!-- More buildings -->
-      <rect x="300" y="50" width="55" height="130" fill="#a0c0d8"/>
-      <rect x="360" y="70" width="40" height="110" fill="#b8d4e8"/>
-      <rect x="405" y="45" width="60" height="135" fill="#90b0c8"/>
-      <rect x="470" y="65" width="45" height="115" fill="#a0c0d8"/>
-      <rect x="520" y="55" width="50" height="125" fill="#b8d4e8"/>
-      <rect x="575" y="80" width="25" height="100" fill="#a0c0d8"/>
-      <!-- Water reflection -->
-      <rect x="0" y="135" width="600" height="45" fill="#d4eaf5" opacity="0.6"/>
-    </svg>
+    <img class="hero-bg" src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1200&q=85" alt="Dubai Business Bay bei Tag">
     <div class="hero-overlay"></div>
     <div class="hero-text">
       <h2>Ihr Unternehmen.<br>In 30 Tagen. In Dubai.</h2>
@@ -319,30 +248,7 @@
 
   <!-- Hero Sunset -->
   <div class="hero">
-    <div class="hero-sunset"></div>
-    <svg style="position:absolute;bottom:0;left:0;right:0;width:100%;height:180px" viewBox="0 0 600 180" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="120" width="600" height="60" fill="#1a0a00" opacity="0.8"/>
-      <!-- Silhouette buildings sunset -->
-      <rect x="0" y="70" width="40" height="110" fill="#0d0500" opacity="0.85"/>
-      <rect x="45" y="50" width="30" height="130" fill="#0d0500" opacity="0.85"/>
-      <rect x="80" y="80" width="50" height="100" fill="#0d0500" opacity="0.85"/>
-      <!-- Burj Khalifa silhouette -->
-      <rect x="245" y="0" width="50" height="180" fill="#0d0500" opacity="0.9"/>
-      <rect x="253" y="0" width="34" height="30" fill="#0d0500" opacity="0.9"/>
-      <rect x="261" y="0" width="18" height="20" fill="#0d0500" opacity="0.9"/>
-      <polygon points="270,0 273,8 267,8" fill="#0d0500" opacity="0.9"/>
-      <!-- Burj Al Arab silhouette (far right) -->
-      <polygon points="480,40 510,180 450,180" fill="#0d0500" opacity="0.7"/>
-      <rect x="460" y="40" width="10" height="140" fill="#0d0500" opacity="0.7"/>
-      <!-- More buildings -->
-      <rect x="300" y="40" width="55" height="140" fill="#0d0500" opacity="0.85"/>
-      <rect x="360" y="60" width="40" height="120" fill="#0d0500" opacity="0.85"/>
-      <rect x="405" y="35" width="60" height="145" fill="#0d0500" opacity="0.85"/>
-      <rect x="520" y="55" width="45" height="125" fill="#0d0500" opacity="0.85"/>
-      <rect x="568" y="75" width="32" height="105" fill="#0d0500" opacity="0.85"/>
-      <!-- Water glow -->
-      <rect x="0" y="140" width="600" height="40" fill="#FF6B35" opacity="0.2"/>
-    </svg>
+    <img class="hero-bg" src="https://images.unsplash.com/photo-1546412414-e1885e51cfa5?w=1200&q=85" alt="Dubai Sonnenuntergang Burj Khalifa">
     <div class="hero-overlay"></div>
     <div class="hero-text">
       <h2>Andere haben es geschafft.<br>Sie auch.</h2>
