@@ -4,452 +4,441 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Startup Hilfe Dubai – Newsletter Vorschau</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
-body { background:#1a1a1a; font-family:'Inter',Helvetica,Arial,sans-serif; padding:60px 20px; }
+body { background:#111; font-family:'Inter',sans-serif; padding:60px 20px; }
+.divider { text-align:center; margin:80px 0 36px; }
+.divider span { font-size:9px; color:#444; letter-spacing:4px; text-transform:uppercase; border:1px solid #2a2a2a; padding:7px 18px; border-radius:20px; }
+.email { width:600px; margin:0 auto; overflow:hidden; }
 
-.page-meta { text-align:center; color:#555; font-size:10px; letter-spacing:3px; text-transform:uppercase; margin-bottom:60px; }
-.mail-divider { text-align:center; margin:80px 0 40px; }
-.mail-divider span { font-size:9px; color:#444; letter-spacing:4px; text-transform:uppercase; border:1px solid #333; padding:6px 16px; border-radius:20px; }
 
-/* EMAIL WRAPPER */
-.email { width:600px; margin:0 auto; background:#ffffff; overflow:hidden; }
+/* ══════════════════════════════════════════
+   MAIL 1 — Dark & Bold
+   Look: Dunkel, groß, dramatisch, wie ein
+   High-End Magazine Cover + Agency Feel
+══════════════════════════════════════════ */
+.m1 { background:#0a0a0a; }
 
-/* ── TOPBAR ── */
-.topbar { background:#0a0a0a; padding:10px 40px; display:flex; align-items:center; justify-content:space-between; }
-.topbar-logo { display:flex; align-items:center; gap:10px; }
-.tl-circle { width:32px; height:32px; background:#1A56FF; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-.tl-inner { display:flex; gap:2.5px; align-items:flex-end; }
-.td { background:#00E5A0; border-radius:50%; }
-.td1 { width:7px; height:7px; }
-.td2 { width:4.5px; height:4.5px; margin-bottom:1px; }
-.tb { width:3px; height:12px; background:#00E5A0; border-radius:1.5px; margin-left:1.5px; }
-.tl-name { font-size:9px; font-weight:700; color:#fff; letter-spacing:2px; text-transform:uppercase; line-height:1.3; }
-.topbar-right { font-size:9px; color:#555; letter-spacing:1.5px; text-transform:uppercase; }
+.m1-header { padding:18px 36px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #1e1e1e; }
+.logo { display:flex; align-items:center; gap:9px; }
+.lc { width:30px; height:30px; background:#1A56FF; border-radius:50%; display:flex; align-items:center; justify-content:center; }
+.li { display:flex; gap:2px; align-items:flex-end; }
+.ld { background:#00E5A0; border-radius:50%; }
+.ld1 { width:6px;height:6px; }
+.ld2 { width:4px;height:4px;margin-bottom:1px; }
+.lb { width:2.5px;height:11px;background:#00E5A0;border-radius:1.5px;margin-left:1px; }
+.ln { font-size:8px;font-weight:800;color:#fff;letter-spacing:2.5px;text-transform:uppercase;line-height:1.3; }
+.m1-header-right { font-size:9px;color:#333;letter-spacing:2px;text-transform:uppercase; }
 
-/* ── HERO ── */
-.hero { position:relative; height:420px; overflow:hidden; }
-.hero img { width:100%; height:100%; object-fit:cover; object-position:center 35%; display:block; }
-.hero-gradient { position:absolute; inset:0; background:linear-gradient(160deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.0) 40%, rgba(0,0,0,0.75) 100%); }
-.hero-body { position:absolute; bottom:0; left:0; right:0; padding:48px 48px 44px; }
-.hero-badge { display:inline-flex; align-items:center; gap:6px; background:rgba(201,168,76,0.92); color:#0a0a0a; font-size:9px; font-weight:800; letter-spacing:2px; text-transform:uppercase; padding:5px 12px; border-radius:2px; margin-bottom:18px; }
-.hero-badge::before { content:''; width:5px; height:5px; background:#0a0a0a; border-radius:50%; display:inline-block; }
-.hero h1 { font-size:38px; font-weight:900; line-height:1.08; color:#fff; letter-spacing:-1px; margin-bottom:14px; text-shadow:0 2px 20px rgba(0,0,0,0.3); }
-.hero p { font-size:15px; color:rgba(255,255,255,0.82); line-height:1.65; font-weight:400; max-width:420px; }
+.m1-hero { position:relative;height:460px;overflow:hidden; }
+.m1-hero img { width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;filter:brightness(0.45); }
+.m1-hero-overlay { position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,10,0.6) 0%,transparent 60%); }
+.m1-hero-content { position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:44px 40px; }
+.m1-issue { font-size:9px;color:#C9A84C;letter-spacing:4px;text-transform:uppercase;font-weight:700;margin-bottom:16px; }
+.m1-hero-content h1 { font-family:'Playfair Display',serif;font-size:52px;font-weight:900;line-height:1.0;color:#fff;letter-spacing:-1px;margin-bottom:18px; }
+.m1-hero-content h1 em { color:#C9A84C;font-style:italic; }
+.m1-hero-sub { font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;max-width:380px;font-weight:400; }
 
-/* ── METRIC STRIP ── */
-.metrics { display:flex; background:#0f1923; }
-.metric { flex:1; padding:22px 16px 20px; text-align:center; position:relative; }
-.metric::after { content:''; position:absolute; right:0; top:20%; height:60%; width:1px; background:rgba(255,255,255,0.06); }
-.metric:last-child::after { display:none; }
-.metric-val { display:block; font-size:24px; font-weight:900; color:#C9A84C; letter-spacing:-0.5px; line-height:1; }
-.metric-label { display:block; font-size:9px; color:rgba(255,255,255,0.4); letter-spacing:1.5px; text-transform:uppercase; margin-top:6px; }
+.m1-stats { display:flex;background:#C9A84C; }
+.m1-stat { flex:1;text-align:center;padding:18px 8px;border-right:1px solid rgba(0,0,0,0.1); }
+.m1-stat:last-child { border:none; }
+.m1-stat-val { font-size:22px;font-weight:900;color:#0a0a0a;display:block;line-height:1; }
+.m1-stat-label { font-size:8px;color:rgba(0,0,0,0.55);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;display:block; }
 
-/* ── SECTION ── */
-.section { padding:52px 48px; }
-.section.alt { background:#f8f8f6; }
-.section.dark { background:#0f1923; }
-.label-tag { font-size:9px; font-weight:700; color:#C9A84C; letter-spacing:3px; text-transform:uppercase; margin-bottom:14px; display:block; }
-.section h2 { font-size:26px; font-weight:800; color:#0a0a0a; line-height:1.2; letter-spacing:-0.5px; margin-bottom:18px; }
-.section.dark h2 { color:#fff; }
-.section p { font-size:15px; color:#4a4a4a; line-height:1.8; margin-bottom:16px; }
-.section p:last-of-type { margin-bottom:0; }
-.section.dark p { color:rgba(255,255,255,0.68); }
+.m1-body { padding:48px 40px;background:#0a0a0a; }
+.m1-eyebrow { font-size:9px;color:#C9A84C;letter-spacing:3px;text-transform:uppercase;font-weight:700;margin-bottom:14px;display:block; }
+.m1-body h2 { font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:#fff;line-height:1.25;margin-bottom:20px;letter-spacing:-0.3px; }
+.m1-body p { font-size:14px;color:rgba(255,255,255,0.55);line-height:1.85;margin-bottom:14px; }
+.m1-body p strong { color:rgba(255,255,255,0.85); }
 
-/* ── PULLQUOTE ── */
-.pullquote { border-left:3px solid #C9A84C; padding:16px 22px; margin:28px 0; background:#fffdf5; }
-.pullquote p { font-size:14px; color:#333; line-height:1.7; margin:0; font-style:italic; }
-.pullquote p strong { color:#0a0a0a; font-style:normal; }
+.m1-services { display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#1a1a1a;margin:0; }
+.m1-srv { background:#111;padding:24px 22px; }
+.m1-srv-num { font-size:9px;color:#C9A84C;letter-spacing:2px;font-weight:700;margin-bottom:10px;display:block; }
+.m1-srv h4 { font-size:13px;font-weight:700;color:#fff;margin-bottom:6px; }
+.m1-srv p { font-size:12px;color:rgba(255,255,255,0.4);line-height:1.65;margin:0; }
 
-/* ── SERVICES LIST ── */
-.services-list { margin-top:28px; display:flex; flex-direction:column; gap:0; }
-.srv { display:flex; align-items:flex-start; gap:16px; padding:16px 0; border-bottom:1px solid #efefef; }
-.srv:last-child { border-bottom:none; }
-.srv-icon { width:36px; height:36px; background:#C9A84C; border-radius:4px; display:flex; align-items:center; justify-content:center; font-size:15px; flex-shrink:0; margin-top:1px; }
-.srv-body { flex:1; }
-.srv-body strong { font-size:14px; font-weight:700; color:#0a0a0a; display:block; margin-bottom:3px; }
-.srv-body span { font-size:13px; color:#777; line-height:1.55; }
+.m1-karim { display:flex;background:#0f0f0f;border-top:1px solid #1e1e1e; }
+.m1-karim-photo { width:160px;flex-shrink:0;background:linear-gradient(145deg,#0d1f35,#0a1525);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;min-height:200px; }
+.m1-monogram { width:60px;height:60px;border:1.5px solid rgba(201,168,76,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#C9A84C;letter-spacing:1px; }
+.m1-karim-photo span { font-size:8px;color:rgba(201,168,76,0.3);letter-spacing:2px;text-transform:uppercase;text-align:center; }
+.m1-karim-text { flex:1;padding:28px 26px; }
+.m1-karim-text .m1-eyebrow { margin-bottom:8px; }
+.m1-karim-text h3 { font-size:17px;font-weight:800;color:#fff;margin-bottom:10px; }
+.m1-karim-text p { font-size:12.5px;color:rgba(255,255,255,0.5);line-height:1.75;margin-bottom:8px; }
+.m1-karim-links { margin-top:14px;display:flex;flex-direction:column;gap:5px; }
+.m1-karim-links a { font-size:11.5px;color:#C9A84C;text-decoration:none;font-weight:600; }
 
-/* ── STEPS ── */
-.steps { margin-top:28px; }
-.step { display:flex; gap:20px; padding:20px 0; border-bottom:1px solid #efefef; }
-.step:last-child { border-bottom:none; padding-bottom:0; }
-.step-n { font-size:11px; font-weight:800; color:#C9A84C; letter-spacing:1px; min-width:24px; padding-top:2px; }
-.step-content h4 { font-size:15px; font-weight:700; color:#0a0a0a; margin-bottom:5px; }
-.step-content p { font-size:13.5px; color:#666; line-height:1.7; margin:0; }
+.m1-cta { padding:48px 40px;text-align:center;background:#0a0a0a;border-top:1px solid #1a1a1a; }
+.m1-cta p { font-size:14px;color:rgba(255,255,255,0.45);line-height:1.7;margin-bottom:28px;max-width:380px;margin-left:auto;margin-right:auto; }
+.m1-btn { display:inline-block;background:#C9A84C;color:#0a0a0a;font-size:12px;font-weight:800;padding:14px 40px;border-radius:2px;text-decoration:none;letter-spacing:2px;text-transform:uppercase; }
+.m1-cta-note { font-size:10px;color:#333;margin-top:12px;display:block;letter-spacing:1px; }
 
-/* ── KARIM ── */
-.karim { display:flex; background:#0f1923; }
-.karim-img { width:180px; flex-shrink:0; background:linear-gradient(135deg,#0d2340 0%,#162f50 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; min-height:220px; }
-.karim-monogram { width:64px; height:64px; background:rgba(201,168,76,0.12); border:2px solid rgba(201,168,76,0.3); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:800; color:#C9A84C; letter-spacing:1px; }
-.karim-img span { font-size:9px; color:rgba(201,168,76,0.4); letter-spacing:1.5px; text-align:center; text-transform:uppercase; }
-.karim-content { flex:1; padding:32px 30px; }
-.karim-content .label-tag { margin-bottom:10px; }
-.karim-content h3 { font-size:20px; font-weight:800; color:#fff; margin-bottom:12px; letter-spacing:-0.3px; }
-.karim-content p { font-size:13px; color:rgba(255,255,255,0.62); line-height:1.75; margin-bottom:10px; }
-.karim-content p em { color:rgba(255,255,255,0.82); font-style:italic; }
-.karim-links { margin-top:18px; display:flex; flex-direction:column; gap:6px; }
-.karim-links a { font-size:12px; font-weight:600; color:#C9A84C; text-decoration:none; }
+.m1-footer { background:#050505;padding:24px 40px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid #151515; }
+.m1-footer-links { font-size:10px;color:#2a2a2a; }
+.m1-footer-links a { color:#3a3a3a;text-decoration:none; }
+.m1-socials { display:flex;gap:8px; }
+.m1-soc { width:26px;height:26px;border:1px solid #222;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;color:#444;text-decoration:none;font-weight:700; }
 
-/* ── TESTIMONIAL ── */
-.testi { padding:40px 48px; background:#0f1923; }
-.testi + .testi { padding-top:0; }
-.testi-inner { padding:32px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); border-radius:4px; }
-.testi-inner + .testi-inner { margin-top:16px; }
-.testi-quote { font-size:32px; color:#C9A84C; font-family:Georgia,serif; line-height:1; margin-bottom:14px; display:block; }
-.testi-text { font-size:14.5px; color:rgba(255,255,255,0.78); line-height:1.8; margin-bottom:16px; font-style:italic; }
-.testi-author { font-size:11px; color:#C9A84C; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; }
 
-/* ── CTA ── */
-.cta { padding:56px 48px; text-align:center; background:#fff; }
-.cta h2 { font-size:24px; font-weight:800; color:#0a0a0a; letter-spacing:-0.5px; margin-bottom:12px; line-height:1.2; }
-.cta p { font-size:15px; color:#777; line-height:1.7; max-width:400px; margin:0 auto 32px; }
-.cta-btn { display:inline-block; background:#0f1923; color:#fff; font-size:14px; font-weight:700; padding:16px 40px; border-radius:4px; text-decoration:none; letter-spacing:0.3px; }
-.cta-btn:hover { background:#C9A84C; color:#0a0a0a; }
-.cta-sub { display:block; font-size:11px; color:#bbb; margin-top:14px; letter-spacing:0.5px; }
-.cta-gold { background:#C9A84C; color:#0a0a0a; }
+/* ══════════════════════════════════════════
+   MAIL 2 — Clean & Editorial
+   Look: Weiss, luftig, Magazine-Layout,
+   Split-Sections, warme Akzente
+══════════════════════════════════════════ */
+.m2 { background:#fff; }
 
-/* ── FOOTER ── */
-.footer { background:#0a0a0a; padding:28px 48px; }
-.footer-top { display:flex; align-items:center; justify-content:space-between; padding-bottom:20px; border-bottom:1px solid rgba(255,255,255,0.06); margin-bottom:18px; }
-.footer-socials { display:flex; gap:10px; }
-.fsoc { width:28px; height:28px; border:1px solid rgba(255,255,255,0.12); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; color:rgba(255,255,255,0.4); font-weight:700; text-decoration:none; }
-.footer-bottom { display:flex; justify-content:space-between; align-items:flex-start; }
-.footer-addr { font-size:10px; color:rgba(255,255,255,0.22); line-height:1.8; }
-.footer-links { font-size:10px; color:rgba(255,255,255,0.28); text-align:right; line-height:1.8; }
-.footer-links a { color:rgba(201,168,76,0.6); text-decoration:none; }
+.m2-header { background:#fff;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #f5f0e8; }
+.m2-header-center { font-family:'Playfair Display',serif;font-size:11px;color:#999;letter-spacing:1px;font-style:italic; }
+
+.m2-hero { position:relative;height:360px;overflow:hidden; }
+.m2-hero img { width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block; }
+.m2-hero-bar { position:absolute;bottom:0;left:0;right:0;background:#fff;padding:24px 40px; }
+.m2-hero-bar .tag { font-size:9px;color:#C9A84C;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:8px; }
+.m2-hero-bar h1 { font-family:'Playfair Display',serif;font-size:32px;font-weight:900;color:#0a0a0a;line-height:1.15;letter-spacing:-0.5px; }
+
+.m2-intro { padding:36px 40px;background:#fff;border-bottom:1px solid #f0f0f0; }
+.m2-intro p { font-size:16px;color:#444;line-height:1.85;font-weight:400; }
+.m2-intro p strong { color:#0a0a0a; }
+
+.m2-split { display:flex;border-bottom:1px solid #f0f0f0; }
+.m2-split-left { width:200px;flex-shrink:0;background:#f8f5ef;padding:32px 28px;border-right:1px solid #ede8de; }
+.m2-split-left .step-n { font-size:48px;font-weight:900;color:#C9A84C;line-height:1;display:block;margin-bottom:10px;font-family:'Playfair Display',serif; }
+.m2-split-left h4 { font-size:13px;font-weight:800;color:#0a0a0a;line-height:1.3; }
+.m2-split-right { flex:1;padding:32px 28px; }
+.m2-split-right p { font-size:13.5px;color:#555;line-height:1.8;margin:0; }
+
+.m2-highlight { background:#0f1923;padding:36px 40px;display:flex;align-items:center;gap:28px; }
+.m2-highlight-num { font-size:64px;font-weight:900;color:#C9A84C;line-height:1;font-family:'Playfair Display',serif;flex-shrink:0; }
+.m2-highlight-text h3 { font-size:18px;font-weight:800;color:#fff;margin-bottom:8px; }
+.m2-highlight-text p { font-size:13px;color:rgba(255,255,255,0.55);line-height:1.7;margin:0; }
+
+.m2-karim-full { background:#fff;padding:36px 40px;display:flex;gap:24px;align-items:flex-start;border-top:3px solid #C9A84C; }
+.m2-karim-avatar { width:80px;height:80px;background:linear-gradient(145deg,#0d1f35,#162f50);border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#C9A84C; }
+.m2-karim-info { flex:1; }
+.m2-karim-info .tag { font-size:9px;color:#C9A84C;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:8px; }
+.m2-karim-info h3 { font-size:20px;font-weight:800;color:#0a0a0a;margin-bottom:8px; }
+.m2-karim-info p { font-size:13px;color:#666;line-height:1.75;margin-bottom:6px; }
+.m2-karim-info a { font-size:12px;font-weight:700;color:#0f1923;text-decoration:none;display:inline-block;margin-right:16px; }
+
+.m2-cta { background:#f8f5ef;padding:48px 40px;text-align:center;border-top:1px solid #ede8de; }
+.m2-cta h2 { font-family:'Playfair Display',serif;font-size:30px;font-weight:900;color:#0a0a0a;margin-bottom:12px;line-height:1.2; }
+.m2-cta p { font-size:14px;color:#777;line-height:1.7;max-width:360px;margin:0 auto 28px; }
+.m2-btn { display:inline-block;background:#0f1923;color:#fff;font-size:13px;font-weight:700;padding:15px 38px;text-decoration:none;letter-spacing:0.5px; }
+.m2-cta-note { font-size:10px;color:#aaa;display:block;margin-top:12px;letter-spacing:1px; }
+
+.m2-footer { background:#0f1923;padding:24px 40px;display:flex;align-items:center;justify-content:space-between; }
+.m2-footer-text { font-size:10px;color:rgba(255,255,255,0.2);line-height:1.8; }
+.m2-footer-text a { color:rgba(201,168,76,0.5);text-decoration:none; }
+.m2-socials { display:flex;gap:8px; }
+.m2-soc { width:26px;height:26px;border:1px solid rgba(255,255,255,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;color:rgba(255,255,255,0.3);text-decoration:none;font-weight:700; }
+
+
+/* ══════════════════════════════════════════
+   MAIL 3 — Warm & Personal
+   Look: Sahne/Creme Hintergrund, grosse
+   Zitate, persönlich & emotional
+══════════════════════════════════════════ */
+.m3 { background:#faf7f2; }
+
+.m3-header { background:#faf7f2;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ede5d8; }
+.m3-header-right { font-size:9px;color:#bbb;letter-spacing:2px;text-transform:uppercase; }
+
+.m3-hero { position:relative;height:340px;overflow:hidden; }
+.m3-hero img { width:100%;height:100%;object-fit:cover;object-position:center 50%;display:block; }
+.m3-hero-caption { position:absolute;bottom:0;left:0;right:0;padding:28px 40px;background:linear-gradient(to top,rgba(250,247,242,1) 0%,rgba(250,247,242,0) 100%); }
+.m3-hero-caption .tag { font-size:9px;color:#C9A84C;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:8px; }
+.m3-hero-caption h1 { font-family:'Playfair Display',serif;font-size:34px;font-weight:900;color:#1a1208;line-height:1.15;letter-spacing:-0.5px; }
+
+.m3-stats-row { display:flex;background:#1a1208;padding:0; }
+.m3-stat { flex:1;padding:20px 12px;text-align:center;border-right:1px solid rgba(255,255,255,0.05); }
+.m3-stat:last-child{border:none;}
+.m3-stat-val { font-size:26px;font-weight:900;color:#C9A84C;display:block;line-height:1;font-family:'Playfair Display',serif; }
+.m3-stat-lbl { font-size:9px;color:rgba(255,255,255,0.35);letter-spacing:1.5px;text-transform:uppercase;margin-top:5px;display:block; }
+
+.m3-intro { padding:44px 40px;background:#faf7f2; }
+.m3-intro .tag { font-size:9px;color:#C9A84C;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:14px; }
+.m3-intro h2 { font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#1a1208;margin-bottom:18px;line-height:1.3; }
+.m3-intro p { font-size:14px;color:#6b5c45;line-height:1.85;margin-bottom:12px; }
+
+.m3-quote-block { padding:0 40px 40px;background:#faf7f2; }
+.m3-quote { background:#fff;border:1px solid #ede5d8;padding:32px;margin-bottom:16px;position:relative; }
+.m3-quote::before { content:'"';font-family:'Playfair Display',serif;font-size:80px;color:#ede5d8;position:absolute;top:-10px;left:24px;line-height:1; }
+.m3-quote-text { font-size:15px;color:#3a2e1e;line-height:1.85;margin-bottom:20px;padding-top:30px;font-style:italic; }
+.m3-quote-author { display:flex;align-items:center;gap:12px;border-top:1px solid #f0ead8;padding-top:16px; }
+.m3-quote-avatar { width:36px;height:36px;background:#ede5d8;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#8a7055;flex-shrink:0; }
+.m3-quote-meta strong { font-size:12px;color:#1a1208;font-weight:700;display:block; }
+.m3-quote-meta span { font-size:11px;color:#aaa; }
+
+.m3-karim-section { background:#1a1208;padding:40px; }
+.m3-karim-section .tag { font-size:9px;color:#C9A84C;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:18px; }
+.m3-karim-inner { display:flex;gap:24px;align-items:flex-start; }
+.m3-karim-photo { width:90px;height:90px;background:linear-gradient(145deg,#2a1f0d,#3a2e1a);border-radius:50%;border:2px solid rgba(201,168,76,0.3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#C9A84C; }
+.m3-karim-info h3 { font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:10px;line-height:1.2; }
+.m3-karim-info p { font-size:13px;color:rgba(255,255,255,0.5);line-height:1.8;margin-bottom:8px; }
+.m3-karim-info em { color:rgba(255,255,255,0.75);font-style:italic; }
+.m3-karim-links { margin-top:16px;display:flex;gap:16px;flex-wrap:wrap; }
+.m3-karim-links a { font-size:11px;font-weight:700;color:#C9A84C;text-decoration:none;letter-spacing:0.5px; }
+
+.m3-why { padding:40px;background:#faf7f2;border-top:1px solid #ede5d8; }
+.m3-why .tag { font-size:9px;color:#C9A84C;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:12px; }
+.m3-why h2 { font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#1a1208;margin-bottom:16px; }
+.m3-why p { font-size:14px;color:#6b5c45;line-height:1.85;margin-bottom:12px; }
+.m3-pullquote { border-left:3px solid #C9A84C;padding:14px 20px;background:#fff;margin:20px 0;font-size:14px;color:#3a2e1e;line-height:1.7;font-style:italic; }
+.m3-pullquote strong { font-style:normal;color:#1a1208; }
+
+.m3-cta { background:#C9A84C;padding:52px 40px;text-align:center; }
+.m3-cta h2 { font-family:'Playfair Display',serif;font-size:32px;font-weight:900;color:#0a0a0a;margin-bottom:12px;line-height:1.15; }
+.m3-cta p { font-size:14px;color:rgba(0,0,0,0.6);line-height:1.7;max-width:360px;margin:0 auto 30px; }
+.m3-btn { display:inline-block;background:#0a0a0a;color:#fff;font-size:13px;font-weight:700;padding:15px 40px;text-decoration:none;letter-spacing:1px;text-transform:uppercase; }
+.m3-cta-note { font-size:10px;color:rgba(0,0,0,0.4);display:block;margin-top:14px;letter-spacing:1px; }
+
+.m3-footer { background:#120e07;padding:24px 40px;display:flex;align-items:center;justify-content:space-between; }
+.m3-footer-text { font-size:10px;color:rgba(255,255,255,0.18);line-height:1.8; }
+.m3-footer-text a { color:rgba(201,168,76,0.4);text-decoration:none; }
+.m3-socials { display:flex;gap:8px; }
+.m3-soc { width:26px;height:26px;border:1px solid rgba(255,255,255,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;color:rgba(255,255,255,0.25);text-decoration:none;font-weight:700; }
 </style>
 </head>
 <body>
 
-<p class="page-meta">Startup Hilfe Dubai &nbsp;·&nbsp; Newsletter Serie &nbsp;·&nbsp; 3 Ausgaben</p>
 
+<!-- ══════════════════════════════
+     MAIL 1 — Dark & Bold
+══════════════════════════════ -->
+<div class="divider"><span>Ausgabe 01 &nbsp;·&nbsp; Warum Dubai?</span></div>
+<div class="email m1">
 
-<!-- ════════════════════════════════════════
-     MAIL 1
-════════════════════════════════════════ -->
-<div class="mail-divider"><span>Ausgabe 01 &nbsp;·&nbsp; Warum Dubai?</span></div>
-<div class="email">
-
-  <div class="topbar">
-    <div class="topbar-logo">
-      <div class="tl-circle"><div class="tl-inner"><div class="td td1"></div><div class="td td2"></div><div class="tb"></div></div></div>
-      <div class="tl-name">Startup Hilfe<br>Dubai</div>
-    </div>
-    <div class="topbar-right">startuphilfedubai.de</div>
+  <div class="m1-header">
+    <div class="logo"><div class="lc"><div class="li"><div class="ld ld1"></div><div class="ld ld2"></div><div class="lb"></div></div></div><div class="ln">Startup Hilfe<br>Dubai</div></div>
+    <div class="m1-header-right">Ausgabe 01 · 2026</div>
   </div>
 
-  <div class="hero">
-    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=90" alt="Dubai bei Nacht">
-    <div class="hero-gradient"></div>
-    <div class="hero-body">
-      <div class="hero-badge">Ausgabe 01</div>
-      <h1>Dubai.<br>Klar. Sicher.<br>Erfolgreich.</h1>
-      <p>Während andere noch überlegen, gründen unsere Klienten bereits. Erfahren Sie, warum Dubai der smarteste Schritt für Ihr Unternehmen ist.</p>
+  <div class="m1-hero">
+    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=90" alt="Dubai Nacht">
+    <div class="m1-hero-overlay"></div>
+    <div class="m1-hero-content">
+      <div class="m1-issue">Startup Hilfe Dubai &nbsp;·&nbsp; Newsletter</div>
+      <h1>Dubai.<br><em>Klar.</em><br>Sicher.<br>Erfolgreich.</h1>
+      <p class="m1-hero-sub">Erfahren Sie, warum tausende europäische Gründer jedes Jahr dieselbe Entscheidung treffen — und warum sie es nie bereuen.</p>
     </div>
   </div>
 
-  <div class="metrics">
-    <div class="metric"><span class="metric-val">0%</span><span class="metric-label">Einkommensteuer</span></div>
-    <div class="metric"><span class="metric-val">30</span><span class="metric-label">Tage bis zur Gründung</span></div>
-    <div class="metric"><span class="metric-val">185+</span><span class="metric-label">Nationalitäten</span></div>
-    <div class="metric"><span class="metric-val">40k+</span><span class="metric-label">Neugründungen/Jahr</span></div>
+  <div class="m1-stats">
+    <div class="m1-stat"><span class="m1-stat-val">0%</span><span class="m1-stat-label">Einkommensteuer</span></div>
+    <div class="m1-stat"><span class="m1-stat-val">30</span><span class="m1-stat-label">Tage bis Gründung</span></div>
+    <div class="m1-stat"><span class="m1-stat-val">185+</span><span class="m1-stat-label">Nationalitäten</span></div>
+    <div class="m1-stat"><span class="m1-stat-val">100%</span><span class="m1-stat-label">Eigentümerschaft</span></div>
   </div>
 
-  <div class="section">
-    <span class="label-tag">Warum Dubai?</span>
-    <h2>Der klügste Standort für Ihr Unternehmen</h2>
-    <p>Dubai ist kein Trend. Es ist eine strategische Entscheidung, die jährlich zehntausende Unternehmer bewusst treffen. Keine Einkommensteuer. Keine Kapitalertragsteuer. In Freezones bis zu 0% Körperschaftsteuer – und das vollkommen legal und transparent.</p>
-    <p>Hinzu kommt eine Infrastruktur, die kaum zu übertreffen ist: weltklasse Bürozentren wie der Dubai Silicon Oasis und das DIFC, ein modernes Bankensystem, direkte Flugverbindungen in alle Kontinente und ein politisch stabiles Umfeld. Dubai liegt geographisch im Herzen zwischen Europa, Asien und Afrika – Ihre Kunden, Investoren und Partner sitzen alle in Reichweite.</p>
-    <div class="pullquote">
-      <p><strong>100% ausländisches Eigentum</strong> — In den meisten Freezones der VAE können Sie Ihr Unternehmen vollständig ohne lokalen Partner besitzen. Volle Kontrolle, von Anfang an.</p>
-    </div>
-    <p>Ob Freezone, Mainland oder Offshore – für jedes Geschäftsmodell gibt es die optimale Struktur. Unsere Aufgabe ist es, Sie klar, sicher und ohne Umwege genau dorthin zu führen.</p>
+  <div class="m1-body">
+    <span class="m1-eyebrow">Der Standortvorteil</span>
+    <h2>Warum Dubai kein Trend ist — sondern eine Strategie</h2>
+    <p>Dubai ist mehr als Luxus und Skyline. Es ist eines der unternehmerfreundlichsten Steuerregimes der Welt, kombiniert mit Infrastruktur auf Weltniveau und einem politisch stabilen Umfeld. <strong>Keine Einkommensteuer. Keine Kapitalertragsteuer. Volle Eigentümerschaft.</strong></p>
+    <p>Während Gründer in Europa mit Bürokratie kämpfen, eröffnen unsere Klienten ihr Konto. Während andere auf Genehmigungen warten, sind unsere Klienten bereits am Markt. Dubai hat die Spielregeln verändert — und wer es versteht, nutzt es.</p>
   </div>
 
-  <div class="section alt">
-    <span class="label-tag">Unsere Leistungen</span>
-    <h2>Was wir für Sie übernehmen</h2>
-    <div class="services-list">
-      <div class="srv"><div class="srv-icon">🏢</div><div class="srv-body"><strong>Firmengründung in Freezone, Mainland oder Offshore</strong><span>Rechtssicher, effizient, auf Ihr Geschäftsmodell zugeschnitten – ohne Überraschungen.</span></div></div>
-      <div class="srv"><div class="srv-icon">🏗️</div><div class="srv-body"><strong>Komplexe Unternehmensstrukturen</strong><span>Holdings, Family Offices und Stiftungen in ganz Dubai und den VAE.</span></div></div>
-      <div class="srv"><div class="srv-icon">🏦</div><div class="srv-body"><strong>Bankkonto-Eröffnung</strong><span>Geschäfts- und Privatkonten mit den richtigen Banken und den besten Konditionen für Ihr Profil.</span></div></div>
-      <div class="srv"><div class="srv-icon">🛂</div><div class="srv-body"><strong>Visa-Management</strong><span>Nomaden-, Investor-, Arbeits- und Golden Visa für die VAE – sowie Spanien.</span></div></div>
-    </div>
+  <div class="m1-services">
+    <div class="m1-srv"><span class="m1-srv-num">01</span><h4>Freezone / Mainland / Offshore</h4><p>Rechtssichere Firmengründung, auf Ihr Modell zugeschnitten.</p></div>
+    <div class="m1-srv"><span class="m1-srv-num">02</span><h4>Holdings &amp; Family Offices</h4><p>Komplexe Strukturen für anspruchsvolle Vermögen.</p></div>
+    <div class="m1-srv"><span class="m1-srv-num">03</span><h4>Bankkonto-Eröffnung</h4><p>Die richtigen Bankpartner. Die richtigen Konditionen.</p></div>
+    <div class="m1-srv"><span class="m1-srv-num">04</span><h4>Visa Management</h4><p>Investor-, Arbeits- und Golden Visa für die VAE.</p></div>
   </div>
 
-  <div class="karim">
-    <div class="karim-img">
-      <div class="karim-monogram">KLH</div>
-      <span>Foto folgt</span>
-    </div>
-    <div class="karim-content">
-      <span class="label-tag">Ihr Ansprechpartner</span>
+  <div class="m1-karim">
+    <div class="m1-karim-photo"><div class="m1-monogram">KLH</div><span>Foto hier</span></div>
+    <div class="m1-karim-text">
+      <span class="m1-eyebrow">Ihr Ansprechpartner</span>
       <h3>Karim Loreti Hassan</h3>
-      <p>In Rom geboren, in Berlin aufgewachsen – mit ägyptischen Wurzeln und tiefen Verbindungen in die VAE. Karim bringt über 20 Jahre Unternehmergeist und 15 Jahre Marketingerfahrung mit.</p>
-      <p>Er spricht Deutsch, Englisch, Arabisch und Italienisch. Er versteht beide Welten: die europäische Mentalität und die Dynamik des Nahen Ostens.</p>
-      <div class="karim-links">
-        <a href="tel:+971503730906">📞 &nbsp;+971 50 373 09 06</a>
-        <a href="https://startuphilfedubai.de">🌐 &nbsp;startuphilfedubai.de</a>
+      <p>In Rom geboren, in Berlin aufgewachsen. Ägyptische Wurzeln, tief verwurzelt in den VAE. 20+ Jahre Unternehmer, 15+ Jahre Marketing.</p>
+      <p>Er versteht beide Welten. Und er spricht Ihre Sprache — auf Deutsch.</p>
+      <div class="m1-karim-links">
+        <a href="tel:+971503730906">📞 +971 50 373 09 06</a>
+        <a href="https://startuphilfedubai.de">🌐 startuphilfedubai.de</a>
       </div>
     </div>
   </div>
 
-  <div class="cta">
-    <h2>Bereit für Ihren<br>nächsten Schritt?</h2>
-    <p>Ein kostenloses Erstgespräch mit Karim. Keine versteckten Kosten. Keine Verpflichtungen. Nur klare Antworten auf Ihre Fragen – auf Deutsch.</p>
-    <a class="cta-btn cta-gold" href="https://startuphilfedubai.de">Kostenloses Erstgespräch buchen</a>
-    <span class="cta-sub">Kostenlos &nbsp;·&nbsp; Unverbindlich &nbsp;·&nbsp; Auf Deutsch</span>
+  <div class="m1-cta">
+    <p>Ein kostenloses Gespräch. Keine Verpflichtungen. Karim beantwortet Ihre Fragen — klar, direkt, auf Deutsch.</p>
+    <a class="m1-btn" href="https://startuphilfedubai.de">Jetzt Gespräch buchen</a>
+    <span class="m1-cta-note">Kostenlos &nbsp;·&nbsp; Unverbindlich &nbsp;·&nbsp; Auf Deutsch</span>
   </div>
 
-  <div class="footer">
-    <div class="footer-top">
-      <div class="topbar-logo">
-        <div class="tl-circle"><div class="tl-inner"><div class="td td1"></div><div class="td td2"></div><div class="tb"></div></div></div>
-        <div class="tl-name">Startup Hilfe<br>Dubai</div>
-      </div>
-      <div class="footer-socials">
-        <a class="fsoc" href="#">in</a>
-        <a class="fsoc" href="#">▶</a>
-        <a class="fsoc" href="#">✕</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-addr">Dubai Silicon Oasis<br>IFZA Business Park, Dubai, UAE<br>+971 50 373 09 06</div>
-      <div class="footer-links">© 2026 Startup Hilfe Dubai<br><a href="#">Abmelden</a> &nbsp;·&nbsp; <a href="#">Einstellungen</a></div>
-    </div>
+  <div class="m1-footer">
+    <div class="logo"><div class="lc"><div class="li"><div class="ld ld1"></div><div class="ld ld2"></div><div class="lb"></div></div></div><div class="ln">Startup Hilfe<br>Dubai</div></div>
+    <div class="m1-socials"><a class="m1-soc" href="#">in</a><a class="m1-soc" href="#">▶</a><a class="m1-soc" href="#">✕</a></div>
+    <div class="m1-footer-links"><a href="#">Abmelden</a> &nbsp;·&nbsp; <a href="#">Einstellungen</a></div>
   </div>
 </div>
 
 
-<!-- ════════════════════════════════════════
-     MAIL 2
-════════════════════════════════════════ -->
-<div class="mail-divider"><span>Ausgabe 02 &nbsp;·&nbsp; Der Prozess</span></div>
-<div class="email">
+<!-- ══════════════════════════════
+     MAIL 2 — Clean & Editorial
+══════════════════════════════ -->
+<div class="divider"><span>Ausgabe 02 &nbsp;·&nbsp; Der Prozess</span></div>
+<div class="email m2">
 
-  <div class="topbar">
-    <div class="topbar-logo">
-      <div class="tl-circle"><div class="tl-inner"><div class="td td1"></div><div class="td td2"></div><div class="tb"></div></div></div>
-      <div class="tl-name">Startup Hilfe<br>Dubai</div>
-    </div>
-    <div class="topbar-right">startuphilfedubai.de</div>
+  <div class="m2-header">
+    <div class="logo"><div class="lc"><div class="li"><div class="ld ld1"></div><div class="ld ld2"></div><div class="lb"></div></div></div><div class="ln" style="color:#0a0a0a;">Startup Hilfe<br>Dubai</div></div>
+    <div class="m2-header-center">Ausgabe 02 · Der Gründungsprozess</div>
+    <div style="font-size:9px;color:#bbb;letter-spacing:1.5px;">2026</div>
   </div>
 
-  <div class="hero">
-    <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1200&q=90" alt="Dubai Skyline bei Tag">
-    <div class="hero-gradient"></div>
-    <div class="hero-body">
-      <div class="hero-badge">Ausgabe 02</div>
-      <h1>Ihr Unternehmen.<br>30 Tage.<br>Dubai.</h1>
-      <p>Der bewährte 5-Schritte-Prozess, den Karim mit über 300 Gründern gegangen ist – von der Idee bis zur laufenden Firma.</p>
+  <div class="m2-hero">
+    <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1200&q=90" alt="Dubai Business Bay">
+    <div class="m2-hero-bar">
+      <span class="tag">Schritt für Schritt</span>
+      <h1>Ihr Unternehmen in Dubai — in 5 Schritten und 30 Tagen.</h1>
     </div>
   </div>
 
-  <div class="metrics">
-    <div class="metric"><span class="metric-val">5</span><span class="metric-label">Klare Schritte</span></div>
-    <div class="metric"><span class="metric-val">30</span><span class="metric-label">Tage oder weniger</span></div>
-    <div class="metric"><span class="metric-val">100%</span><span class="metric-label">Eigentümerschaft</span></div>
+  <div class="m2-intro">
+    <p>Viele Gründer denken, eine Firmengründung in Dubai ist kompliziert. <strong>Mit der richtigen Begleitung ist sie es nicht.</strong> Hier ist der bewährte Prozess, den Karim Loreti Hassan mit über 300 Gründern gegangen ist — vollständig, klar und ohne Überraschungen.</p>
   </div>
 
-  <div class="section">
-    <span class="label-tag">Schritt für Schritt</span>
-    <h2>So gründen Sie Ihr Unternehmen in Dubai</h2>
-    <p>Viele glauben, eine Gründung in Dubai ist kompliziert. Mit dem richtigen Partner ist sie es nicht. Hier ist der Prozess, den Karim mit Hunderten von Gründern durchlaufen hat – und der jedes Mal funktioniert.</p>
-    <div class="steps">
-      <div class="step">
-        <div class="step-n">01</div>
-        <div class="step-content">
-          <h4>Strategie &amp; Strukturwahl</h4>
-          <p>Freezone, Mainland oder Offshore? Jede Option hat Vor- und Nachteile je nach Geschäftsmodell, Zielmarkt und steuerlicher Situation. Karim analysiert Ihre Lage und empfiehlt die optimale Struktur – mit klaren Zahlen, ohne Fachchinesisch.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-n">02</div>
-        <div class="step-content">
-          <h4>Dokumente &amp; Vorbereitung</h4>
-          <p>Vollständig beim ersten Mal – das spart Wochen. Karim gibt Ihnen eine präzise Checkliste aller Unterlagen und prüft alles persönlich, bevor es bei den Behörden eingereicht wird. Kein hin und her.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-n">03</div>
-        <div class="step-content">
-          <h4>Registrierung &amp; Lizenzierung</h4>
-          <p>Namensprüfung, Lizenzbeantragung, Behördengänge – wir koordinieren alles. Sie müssen nicht vor Ort sein. Der gesamte Prozess läuft digital und wird von Karim persönlich begleitet.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-n">04</div>
-        <div class="step-content">
-          <h4>Bankkonto eröffnen</h4>
-          <p>Die Kontoeröffnung ist für viele der schwierigste Schritt – ohne die richtigen Kontakte. Karim arbeitet seit Jahren mit den relevanten Banken zusammen und weiß genau, welches Institut zu welchem Unternehmensprofil passt.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-n">05</div>
-        <div class="step-content">
-          <h4>Visa &amp; Markteinstieg</h4>
-          <p>Investorvisum, Arbeitsvisum oder Golden Visa – wir beantragen alles für Sie. Danach stehen wir Ihnen weiter zur Seite: mit Buchhaltungspartnern, Bürolösungen und unserem lokalen Netzwerk in Dubai.</p>
-        </div>
-      </div>
+  <div class="m2-split">
+    <div class="m2-split-left"><span class="step-n">01</span><h4>Strategie &amp; Strukturwahl</h4></div>
+    <div class="m2-split-right"><p>Freezone, Mainland oder Offshore? Jede Struktur hat ihre Berechtigung — aber nicht für jeden. Karim analysiert Ihr Geschäftsmodell, Ihren Zielmarkt und Ihre steuerliche Situation und empfiehlt exakt das, was zu Ihnen passt. Mit konkreten Zahlen, ohne Fachchinesisch.</p></div>
+  </div>
+  <div class="m2-split">
+    <div class="m2-split-left"><span class="step-n">02</span><h4>Dokumente &amp; Vorbereitung</h4></div>
+    <div class="m2-split-right"><p>Vollständig beim ersten Mal — das spart Wochen. Karim gibt Ihnen eine präzise Checkliste aller Unterlagen und prüft persönlich, bevor etwas eingereicht wird. Kein hin und her mit Behörden.</p></div>
+  </div>
+  <div class="m2-split">
+    <div class="m2-split-left"><span class="step-n">03</span><h4>Registrierung &amp; Lizenz</h4></div>
+    <div class="m2-split-right"><p>Namensprüfung, Lizenzbeantragung, Behördengänge — wir koordinieren alles. Sie müssen nicht vor Ort sein. Der gesamte Prozess läuft digital, persönlich begleitet von Karim.</p></div>
+  </div>
+  <div class="m2-split">
+    <div class="m2-split-left"><span class="step-n">04</span><h4>Bankkonto</h4></div>
+    <div class="m2-split-right"><p>Die Kontoeröffnung in Dubai ist ohne die richtigen Kontakte der schwierigste Schritt. Karim hat jahrelange Beziehungen zu den relevanten Banken und weiß genau, welches Institut zu welchem Profil passt.</p></div>
+  </div>
+  <div class="m2-split" style="border-bottom:none;">
+    <div class="m2-split-left"><span class="step-n">05</span><h4>Visa &amp; Start</h4></div>
+    <div class="m2-split-right"><p>Investorvisum, Arbeitsvisum, Golden Visa — wir beantragen alles. Danach bleiben wir an Ihrer Seite: Buchhaltungspartner, Bürolösungen, lokales Netzwerk in Dubai.</p></div>
+  </div>
+
+  <div class="m2-highlight">
+    <div class="m2-highlight-num">300+</div>
+    <div class="m2-highlight-text">
+      <h3>Gründungen. Persönlich begleitet.</h3>
+      <p>Karim Loreti Hassan hat über 300 Gründer aus Europa durch diesen Prozess begleitet. Jede Gründung ist einzigartig — die Erfahrung, die er mitbringt, nicht.</p>
     </div>
   </div>
 
-  <div class="section alt">
-    <span class="label-tag">Was Karim anders macht</span>
-    <h2>Kein Vermittler. Ihr Partner.</h2>
-    <p>Karim Loreti Hassan füllt keine Formulare aus und reicht sie weiter. Er ist selbst Unternehmer – mit eigenen Firmen in Dubai und einem Netzwerk, das er über zwei Jahrzehnte aufgebaut hat. Er versteht die Fragen europäischer Gründer, weil er denselben Weg gegangen ist.</p>
-    <div class="pullquote">
-      <p><strong>Persönliche Betreuung auf Deutsch</strong> – Karim und sein Team kommunizieren auf Deutsch, Englisch, Arabisch und Italienisch. Keine Sprachbarrieren, keine Missverständnisse.</p>
-    </div>
-  </div>
-
-  <div class="karim">
-    <div class="karim-img">
-      <div class="karim-monogram">KLH</div>
-      <span>Foto folgt</span>
-    </div>
-    <div class="karim-content">
-      <span class="label-tag">Gründer &amp; Berater</span>
+  <div class="m2-karim-full">
+    <div class="m2-karim-avatar">KLH</div>
+    <div class="m2-karim-info">
+      <span class="tag">Über Karim</span>
       <h3>Karim Loreti Hassan</h3>
-      <p>20+ Jahre Unternehmer. 15+ Jahre Marketing. Dubai Silicon Oasis, IFZA Business Park.</p>
-      <p><em>"Ich helfe Gründern, die Fehler zu vermeiden, die ich selbst gemacht habe."</em></p>
-      <div class="karim-links">
-        <a href="tel:+971503730906">📞 &nbsp;+971 50 373 09 06</a>
-        <a href="https://wa.me/971503730906">💬 &nbsp;WhatsApp</a>
+      <p>In Rom geboren, in Berlin aufgewachsen — mit ägyptischen Wurzeln und Familie in den VAE. 20+ Jahre Unternehmer. 15+ Jahre Marketing. Büro: Dubai Silicon Oasis, IFZA Business Park.</p>
+      <p>Er spricht Ihre Sprache. Wortwörtlich: Deutsch, Englisch, Arabisch, Italienisch.</p>
+      <div style="margin-top:14px;">
+        <a href="tel:+971503730906">📞 +971 50 373 09 06</a>
+        <a href="https://wa.me/971503730906">💬 WhatsApp</a>
+        <a href="https://startuphilfedubai.de">🌐 startuphilfedubai.de</a>
       </div>
     </div>
   </div>
 
-  <div class="cta">
-    <h2>30 Minuten.<br>Ihr kompletter Plan.</h2>
-    <p>Buchen Sie jetzt Ihr kostenloses Gespräch mit Karim. In 30 Minuten wissen Sie exakt, welche Struktur zu Ihnen passt, was Ihre Gründung kostet und wie schnell es gehen kann.</p>
-    <a class="cta-btn cta-gold" href="https://startuphilfedubai.de">Jetzt Termin mit Karim buchen</a>
-    <span class="cta-sub">Kostenlos &nbsp;·&nbsp; Per Telefon oder Video &nbsp;·&nbsp; Auf Deutsch</span>
+  <div class="m2-cta">
+    <h2>Bereit für den ersten Schritt?</h2>
+    <p>30 Minuten mit Karim. Sie erfahren exakt, welche Struktur passt, was es kostet und wie schnell es geht.</p>
+    <a class="m2-btn" href="https://startuphilfedubai.de">Termin mit Karim buchen</a>
+    <span class="m2-cta-note">Kostenlos &nbsp;·&nbsp; Auf Deutsch &nbsp;·&nbsp; Per Video oder Telefon</span>
   </div>
 
-  <div class="footer">
-    <div class="footer-top">
-      <div class="topbar-logo">
-        <div class="tl-circle"><div class="tl-inner"><div class="td td1"></div><div class="td td2"></div><div class="tb"></div></div></div>
-        <div class="tl-name">Startup Hilfe<br>Dubai</div>
-      </div>
-      <div class="footer-socials">
-        <a class="fsoc" href="#">in</a>
-        <a class="fsoc" href="#">▶</a>
-        <a class="fsoc" href="#">✕</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-addr">Dubai Silicon Oasis<br>IFZA Business Park, Dubai, UAE<br>+971 50 373 09 06</div>
-      <div class="footer-links">© 2026 Startup Hilfe Dubai<br><a href="#">Abmelden</a> &nbsp;·&nbsp; <a href="#">Einstellungen</a></div>
-    </div>
+  <div class="m2-footer">
+    <div class="m2-footer-text">© 2026 Startup Hilfe Dubai<br>Dubai Silicon Oasis, IFZA Business Park, UAE<br><a href="#">Abmelden</a> · <a href="#">Einstellungen</a></div>
+    <div class="m2-socials"><a class="m2-soc" href="#">in</a><a class="m2-soc" href="#">▶</a><a class="m2-soc" href="#">✕</a></div>
   </div>
 </div>
 
 
-<!-- ════════════════════════════════════════
-     MAIL 3
-════════════════════════════════════════ -->
-<div class="mail-divider"><span>Ausgabe 03 &nbsp;·&nbsp; Erfolgsgeschichten</span></div>
-<div class="email">
+<!-- ══════════════════════════════
+     MAIL 3 — Warm & Personal
+══════════════════════════════ -->
+<div class="divider"><span>Ausgabe 03 &nbsp;·&nbsp; Erfolgsgeschichten</span></div>
+<div class="email m3">
 
-  <div class="topbar">
-    <div class="topbar-logo">
-      <div class="tl-circle"><div class="tl-inner"><div class="td td1"></div><div class="td td2"></div><div class="tb"></div></div></div>
-      <div class="tl-name">Startup Hilfe<br>Dubai</div>
-    </div>
-    <div class="topbar-right">startuphilfedubai.de</div>
+  <div class="m3-header">
+    <div class="logo"><div class="lc"><div class="li"><div class="ld ld1"></div><div class="ld ld2"></div><div class="lb"></div></div></div><div class="ln" style="color:#1a1208;">Startup Hilfe<br>Dubai</div></div>
+    <div class="m3-header-right">Ausgabe 03 · 2026</div>
   </div>
 
-  <div class="hero">
+  <div class="m3-hero">
     <img src="https://images.unsplash.com/photo-1546412414-e1885e51cfa5?w=1200&q=90" alt="Dubai Sonnenuntergang">
-    <div class="hero-gradient"></div>
-    <div class="hero-body">
-      <div class="hero-badge">Ausgabe 03</div>
-      <h1>Andere haben<br>es geschafft.<br>Jetzt Sie.</h1>
-      <p>Gründer aus Deutschland, Österreich und der Schweiz – sie haben den Schritt gewagt. Hier sind ihre Geschichten.</p>
+    <div class="m3-hero-caption">
+      <span class="tag">Echte Geschichten</span>
+      <h1>Andere haben es geschafft.<br>Jetzt sind Sie dran.</h1>
     </div>
   </div>
 
-  <div class="metrics">
-    <div class="metric"><span class="metric-val">300+</span><span class="metric-label">Erfolgreiche Gründungen</span></div>
-    <div class="metric"><span class="metric-val">26</span><span class="metric-label">Tage Ø Prozesszeit</span></div>
-    <div class="metric"><span class="metric-val">4</span><span class="metric-label">Sprachen</span></div>
-    <div class="metric"><span class="metric-val">20+</span><span class="metric-label">Jahre Erfahrung</span></div>
+  <div class="m3-stats-row">
+    <div class="m3-stat"><span class="m3-stat-val">300+</span><span class="m3-stat-lbl">Gründungen</span></div>
+    <div class="m3-stat"><span class="m3-stat-val">26</span><span class="m3-stat-lbl">Tage Ø</span></div>
+    <div class="m3-stat"><span class="m3-stat-val">20+</span><span class="m3-stat-lbl">Jahre Erfahrung</span></div>
+    <div class="m3-stat"><span class="m3-stat-val">4</span><span class="m3-stat-lbl">Sprachen</span></div>
   </div>
 
-  <div class="section">
-    <span class="label-tag">Echte Stimmen</span>
-    <h2>Was unsere Gründer sagen</h2>
-    <p>Hinter jeder Gründung steckt eine Geschichte. Hier berichten Gründer, die mit Startup Hilfe Dubai den Schritt in die VAE gewagt haben – und was sich seitdem verändert hat.</p>
+  <div class="m3-intro">
+    <span class="tag">Was unsere Gründer sagen</span>
+    <h2>Hinter jeder Firma steckt eine Geschichte.</h2>
+    <p>Zahlen sind gut. Menschen sind besser. Hier sind zwei Gründer, die mit Startup Hilfe Dubai den Schritt in die VAE gewagt haben — und was sich seitdem verändert hat.</p>
   </div>
 
-  <div class="testi">
-    <div class="testi-inner">
-      <span class="testi-quote">"</span>
-      <p class="testi-text">Ich hatte Bedenken, dass die Gründung in Dubai ein bürokratischer Albtraum wird. Mit Karim war es das genaue Gegenteil. Er hat alles koordiniert, mich durch jeden Schritt begleitet und mich nie im Dunkeln gelassen. Nach 3 Wochen war meine Firma eingetragen. Heute mache ich meinen kompletten Umsatz steuerfrei – und bereue jeden Tag, den ich gewartet habe.</p>
-      <span class="testi-author">Marco S. &nbsp;·&nbsp; IT-Unternehmer &nbsp;·&nbsp; München → Dubai</span>
+  <div class="m3-quote-block">
+    <div class="m3-quote">
+      <p class="m3-quote-text">Ich hatte Bedenken, dass die Gründung in Dubai ein bürokratischer Albtraum wird. Mit Karim war es das genaue Gegenteil. Er hat alles koordiniert, mich durch jeden Schritt begleitet und mich nie im Dunkeln gelassen. Nach drei Wochen war meine Firma eingetragen. Heute mache ich meinen kompletten Umsatz steuerfrei — und bereue jeden Tag, den ich gewartet habe.</p>
+      <div class="m3-quote-author">
+        <div class="m3-quote-avatar">MS</div>
+        <div class="m3-quote-meta"><strong>Marco S.</strong><span>IT-Unternehmer &nbsp;·&nbsp; München → Dubai</span></div>
+      </div>
     </div>
-    <div class="testi-inner">
-      <span class="testi-quote">"</span>
-      <p class="testi-text">Als E-Commerce-Gründerin hatte ich sehr spezifische Anforderungen. Karim hat nicht einfach eine Standardlösung verkauft – er hat sich mein Business wirklich angehört und eine Struktur gefunden, die perfekt passt. Das Netzwerk, das er mir geöffnet hat, war allein schon Gold wert. Meine Firma läuft seit 8 Monaten, ich wachse schneller als je zuvor.</p>
-      <span class="testi-author">Sarah M. &nbsp;·&nbsp; E-Commerce &nbsp;·&nbsp; Wien → Dubai</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <span class="label-tag">Wer ist Karim?</span>
-    <h2>Ihr Shortcut nach Dubai</h2>
-    <p>Karim Loreti Hassan kennt Dubai nicht aus dem Lehrbuch. Er wurde in Rom geboren, wuchs in Berlin auf – mit ägyptischen Wurzeln und familiären Verbindungen in die VAE. Dieses Aufwachsen zwischen den Kulturen ist kein netter Lebenslauf-Sticker. Es ist der Grund, warum er europäische Gründer so präzise beraten kann.</p>
-    <p>Er versteht die deutschen Bedenken rund um Rechtssicherheit und Transparenz. Und er versteht die Spielregeln in Dubai. Diese Kombination ist selten. Und sie ist Ihr Vorteil.</p>
-    <div class="pullquote">
-      <p><em>"Ich helfe Menschen, die Fehler zu vermeiden, die ich selbst gemacht habe. Wer zu mir kommt, geht den kürzesten Weg."</em><br><strong style="font-style:normal;color:#0a0a0a;">— Karim Loreti Hassan</strong></p>
-    </div>
-  </div>
-
-  <div class="karim">
-    <div class="karim-img">
-      <div class="karim-monogram">KLH</div>
-      <span>Foto folgt</span>
-    </div>
-    <div class="karim-content">
-      <span class="label-tag">Founder &amp; Berater</span>
-      <h3>Karim Loreti Hassan</h3>
-      <p>In Rom geboren. In Berlin aufgewachsen. In Dubai gegründet. Mit über 300 begleiteten Firmengründungen ist Karim der erfahrenste deutschsprachige Dubai-Berater in den VAE.</p>
-      <div class="karim-links">
-        <a href="tel:+971503730906">📞 &nbsp;+971 50 373 09 06</a>
-        <a href="https://wa.me/971503730906">💬 &nbsp;WhatsApp schreiben</a>
-        <a href="https://startuphilfedubai.de">🌐 &nbsp;startuphilfedubai.de</a>
+    <div class="m3-quote">
+      <p class="m3-quote-text">Als E-Commerce-Gründerin hatte ich spezifische Anforderungen an Bankkonto, Zahlungsanbieter und Logistik. Karim hat nicht einfach eine Standardlösung verkauft — er hat sich mein Business wirklich angehört. Das Netzwerk, das er mir geöffnet hat, war allein schon Gold wert. Meine Firma wächst schneller als je zuvor.</p>
+      <div class="m3-quote-author">
+        <div class="m3-quote-avatar">SM</div>
+        <div class="m3-quote-meta"><strong>Sarah M.</strong><span>E-Commerce &nbsp;·&nbsp; Wien → Dubai</span></div>
       </div>
     </div>
   </div>
 
-  <div class="cta">
+  <div class="m3-karim-section">
+    <span class="tag">Wer ist Karim?</span>
+    <div class="m3-karim-inner">
+      <div class="m3-karim-photo">KLH</div>
+      <div class="m3-karim-info">
+        <h3>Karim Loreti Hassan</h3>
+        <p>In Rom geboren, in Berlin aufgewachsen. Ägyptischer Vater, italienische Mutter, Familie in London und den VAE. 20+ Jahre Unternehmer. 15+ Jahre Marketing.</p>
+        <p><em>"Ich helfe Gründern, die Fehler zu vermeiden, die ich selbst gemacht habe. Wer zu mir kommt, geht den kürzesten Weg."</em></p>
+        <div class="m3-karim-links">
+          <a href="tel:+971503730906">📞 +971 50 373 09 06</a>
+          <a href="https://wa.me/971503730906">💬 WhatsApp</a>
+          <a href="https://startuphilfedubai.de">🌐 Website</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="m3-why">
+    <span class="tag">Was Dubai wirklich ausmacht</span>
+    <h2>Es ist nicht nur die Steuer.</h2>
+    <p>Es ist die Kombination: ein stabiles politisches System, eine Regierung, die Unternehmertum aktiv fördert, und eine Gesellschaft aus 185 Nationalitäten. Hier sind Ihre Kunden, Investoren und Partner — alles an einem Ort.</p>
+    <div class="m3-pullquote"><strong>Karim versteht beide Welten.</strong> Die europäische Mentalität rund um Rechtssicherheit und Transparenz. Und die Spielregeln in Dubai. Diese Kombination ist selten — und Ihr Vorteil.</div>
+    <p>Ob Freezone, Mainland oder Offshore — für jedes Geschäftsmodell gibt es die optimale Struktur. Startup Hilfe Dubai findet sie für Sie: klar, sicher, ohne Umwege.</p>
+  </div>
+
+  <div class="m3-cta">
     <h2>Ihre Geschichte<br>beginnt jetzt.</h2>
-    <p>Buchen Sie Ihr kostenloses Gespräch mit Karim. In 30 Minuten haben Sie Klarheit über Ihren Weg nach Dubai – ohne Verpflichtungen, ohne versteckte Kosten.</p>
-    <a class="cta-btn cta-gold" href="https://startuphilfedubai.de">Jetzt Ihre Erfolgsgeschichte starten</a>
-    <span class="cta-sub">Kostenlos &nbsp;·&nbsp; Unverbindlich &nbsp;·&nbsp; Auf Deutsch</span>
+    <p>Ein kostenloses Gespräch mit Karim. In 30 Minuten wissen Sie, wie Ihr Weg nach Dubai aussieht.</p>
+    <a class="m3-btn" href="https://startuphilfedubai.de">Jetzt Erfolgsgeschichte starten</a>
+    <span class="m3-cta-note">Kostenlos &nbsp;·&nbsp; Unverbindlich &nbsp;·&nbsp; Auf Deutsch</span>
   </div>
 
-  <div class="footer">
-    <div class="footer-top">
-      <div class="topbar-logo">
-        <div class="tl-circle"><div class="tl-inner"><div class="td td1"></div><div class="td td2"></div><div class="tb"></div></div></div>
-        <div class="tl-name">Startup Hilfe<br>Dubai</div>
-      </div>
-      <div class="footer-socials">
-        <a class="fsoc" href="#">in</a>
-        <a class="fsoc" href="#">▶</a>
-        <a class="fsoc" href="#">✕</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-addr">Dubai Silicon Oasis<br>IFZA Business Park, Dubai, UAE<br>+971 50 373 09 06</div>
-      <div class="footer-links">© 2026 Startup Hilfe Dubai<br><a href="#">Abmelden</a> &nbsp;·&nbsp; <a href="#">Einstellungen</a></div>
-    </div>
+  <div class="m3-footer">
+    <div class="m3-footer-text">© 2026 Startup Hilfe Dubai<br>Dubai Silicon Oasis, IFZA Business Park, UAE<br><a href="#">Abmelden</a> · <a href="#">Einstellungen</a></div>
+    <div class="m3-socials"><a class="m3-soc" href="#">in</a><a class="m3-soc" href="#">▶</a><a class="m3-soc" href="#">✕</a></div>
   </div>
 </div>
 
