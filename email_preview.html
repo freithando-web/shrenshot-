@@ -71,15 +71,21 @@ body { background:#e8ecf0; font-family:'Inter',sans-serif; padding:60px 20px; }
 .m1-srv h4 { font-size:13px;font-weight:700;color:#0a0a0a;margin-bottom:6px; }
 .m1-srv p { font-size:12px;color:#777;line-height:1.65;margin:0; }
 
-.m1-karim { display:flex;background:#f7f9ff;border-top:3px solid #00E5A0; }
-.m1-karim-img { width:160px;flex-shrink:0;background:linear-gradient(145deg,#1A56FF,#0d3bcc);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;min-height:200px; }
-.m1-monogram { width:60px;height:60px;border:2px solid rgba(0,229,160,0.5);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#00E5A0; }
-.m1-karim-img span { font-size:8px;color:rgba(255,255,255,0.3);letter-spacing:2px;text-transform:uppercase;text-align:center;padding:0 12px; }
-.m1-karim-text { flex:1;padding:28px 26px; }
-.m1-karim-text h3 { font-size:17px;font-weight:800;color:#0a0a0a;margin-bottom:8px; }
-.m1-karim-text p { font-size:12.5px;color:#555;line-height:1.75;margin-bottom:8px; }
-.m1-karim-links { margin-top:14px;display:flex;flex-direction:column;gap:5px; }
-.m1-karim-links a { font-size:11.5px;color:#1A56FF;text-decoration:none;font-weight:700; }
+.m1-karim { position:relative;overflow:hidden;min-height:240px; }
+.m1-karim-photo { position:relative;width:100%;height:240px;background:linear-gradient(135deg,#0a0f1a 0%,#1a2540 40%,#0d1525 100%);display:flex;align-items:flex-end; }
+.m1-karim-photo img { position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top; }
+.m1-karim-overlay { position:absolute;inset:0;background:linear-gradient(to right, rgba(10,15,26,0.0) 40%, rgba(26,86,255,0.85) 100%); }
+.m1-karim-overlay2 { position:absolute;inset:0;background:linear-gradient(to top, rgba(10,15,26,0.85) 0%, transparent 50%); }
+.m1-karim-textbox { position:absolute;bottom:0;right:0;width:55%;padding:24px 28px;z-index:2; }
+.m1-karim-bottom { position:absolute;bottom:0;left:0;right:0;padding:20px 24px;z-index:2; }
+.m1-karim-bottom .kname { font-size:18px;font-weight:900;color:#fff;display:block;line-height:1.1;text-shadow:0 2px 8px rgba(0,0,0,0.5); }
+.m1-karim-bottom .ktitle { font-size:10px;color:#00E5A0;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-top:4px;display:block; }
+.m1-karim-bottom .klinks { margin-top:10px;display:flex;gap:14px; }
+.m1-karim-bottom .klinks a { font-size:11px;color:rgba(255,255,255,0.7);text-decoration:none;font-weight:600; }
+.m1-karim-right { position:absolute;top:0;right:0;bottom:0;width:52%;padding:24px 28px;display:flex;flex-direction:column;justify-content:center;z-index:2; }
+.m1-karim-right .m1-eyebrow { color:#00E5A0;margin-bottom:10px; }
+.m1-karim-right h3 { font-size:15px;font-weight:800;color:#fff;margin-bottom:10px; }
+.m1-karim-right p { font-size:12px;color:rgba(255,255,255,0.65);line-height:1.7;margin-bottom:6px; }
 
 .m1-cta { padding:48px 40px;text-align:center;background:#1A56FF; }
 .m1-cta p { font-size:14px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:28px;max-width:380px;margin-left:auto;margin-right:auto; }
@@ -127,12 +133,18 @@ body { background:#e8ecf0; font-family:'Inter',sans-serif; padding:60px 20px; }
 .m2-green-banner-text h3 { font-size:17px;font-weight:800;color:#0a0a0a;margin-bottom:6px; }
 .m2-green-banner-text p { font-size:13px;color:rgba(0,0,0,0.6);line-height:1.65;margin:0; }
 
-.m2-karim { padding:36px 40px;background:#fff;display:flex;gap:22px;align-items:flex-start;border-top:3px solid #1A56FF; }
-.m2-karim-box { width:76px;height:76px;background:#1A56FF;border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#00E5A0; }
-.m2-karim-info .tag { font-size:9px;color:#1A56FF;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:8px; }
-.m2-karim-info h3 { font-size:19px;font-weight:800;color:#0a0a0a;margin-bottom:8px; }
-.m2-karim-info p { font-size:13px;color:#666;line-height:1.75;margin-bottom:6px; }
-.m2-karim-info a { font-size:12px;font-weight:700;color:#1A56FF;text-decoration:none;margin-right:16px;display:inline-block;margin-top:8px; }
+.m2-karim { border-top:3px solid #1A56FF;position:relative;overflow:hidden;height:220px; }
+.m2-karim img { position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%; }
+.m2-karim-grad { position:absolute;inset:0;background:linear-gradient(to right,rgba(255,255,255,0) 30%,rgba(255,255,255,0.97) 55%,#fff 100%); }
+.m2-karim-grad2 { position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,0.5) 0%,transparent 40%); }
+.m2-karim-content { position:absolute;right:0;top:0;bottom:0;width:52%;padding:28px 32px;display:flex;flex-direction:column;justify-content:center; }
+.m2-karim-content .tag { font-size:9px;color:#1A56FF;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:8px; }
+.m2-karim-content h3 { font-size:19px;font-weight:800;color:#0a0a0a;margin-bottom:8px; }
+.m2-karim-content p { font-size:12.5px;color:#555;line-height:1.7;margin-bottom:8px; }
+.m2-karim-content a { font-size:11.5px;font-weight:700;color:#1A56FF;text-decoration:none;margin-right:14px;display:inline-block;margin-top:4px; }
+.m2-karim-namebar { position:absolute;bottom:0;left:0;width:52%;padding:14px 20px;background:linear-gradient(to top,rgba(0,0,0,0.7),transparent); }
+.m2-karim-namebar span { font-size:12px;font-weight:800;color:#fff;display:block; }
+.m2-karim-namebar small { font-size:9px;color:#00E5A0;letter-spacing:1.5px;text-transform:uppercase; }
 
 .m2-cta { background:#f7f9ff;padding:48px 40px;text-align:center;border-top:1px solid #eef2ff; }
 .m2-cta h2 { font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:#0a0a0a;margin-bottom:12px; }
@@ -185,14 +197,15 @@ body { background:#e8ecf0; font-family:'Inter',sans-serif; padding:60px 20px; }
 .m3-card-meta strong { font-size:12px;color:#0a0a0a;font-weight:700;display:block; }
 .m3-card-meta span { font-size:11px;color:#aaa; }
 
-.m3-karim { background:#fff;margin:0 20px;border-radius:8px;padding:28px;box-shadow:0 2px 16px rgba(26,86,255,0.08);display:flex;gap:20px;margin-bottom:32px; }
-.m3-karim-photo { width:80px;height:80px;background:#1A56FF;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#00E5A0; }
-.m3-karim-text .tag { font-size:9px;color:#1A56FF;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:6px; }
-.m3-karim-text h3 { font-size:18px;font-weight:800;color:#0a0a0a;margin-bottom:8px; }
-.m3-karim-text p { font-size:13px;color:#666;line-height:1.75;margin-bottom:6px; }
-.m3-karim-text em { color:#1A56FF;font-style:italic; }
-.m3-karim-links { margin-top:12px;display:flex;gap:16px;flex-wrap:wrap; }
-.m3-karim-links a { font-size:11px;font-weight:700;color:#1A56FF;text-decoration:none; }
+.m3-karim { margin:0 20px 32px;border-radius:10px;overflow:hidden;box-shadow:0 4px 24px rgba(26,86,255,0.12);position:relative;height:200px; }
+.m3-karim img { position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%; }
+.m3-karim-grad { position:absolute;inset:0;background:linear-gradient(135deg, rgba(26,86,255,0.75) 0%, rgba(0,0,0,0.2) 50%, rgba(0,229,160,0.3) 100%); }
+.m3-karim-content { position:absolute;inset:0;padding:24px 28px;display:flex;flex-direction:column;justify-content:flex-end;z-index:2; }
+.m3-karim-content .tag { font-size:9px;color:#00E5A0;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:6px; }
+.m3-karim-content h3 { font-size:20px;font-weight:900;color:#fff;margin-bottom:6px;text-shadow:0 2px 8px rgba(0,0,0,0.4); }
+.m3-karim-content p { font-size:12px;color:rgba(255,255,255,0.8);line-height:1.6;margin-bottom:10px; }
+.m3-karim-links { display:flex;gap:14px;flex-wrap:wrap; }
+.m3-karim-links a { font-size:11px;font-weight:700;color:#fff;text-decoration:none;background:rgba(255,255,255,0.15);padding:5px 10px;border-radius:3px;backdrop-filter:blur(4px); }
 
 .m3-why { padding:36px 40px;background:#eef3ff; }
 .m3-why .tag { font-size:9px;color:#1A56FF;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:10px; }
@@ -263,14 +276,22 @@ body { background:#e8ecf0; font-family:'Inter',sans-serif; padding:60px 20px; }
   </div>
 
   <div class="m1-karim">
-    <div class="m1-karim-img"><div class="m1-monogram">KLH</div><span>Foto hier<br>einfügen</span></div>
-    <div class="m1-karim-text">
-      <span class="m1-eyebrow">Ihr Ansprechpartner</span>
-      <h3>Karim Loreti Hassan</h3>
-      <p>In Rom geboren, in Berlin aufgewachsen. Ägyptische Wurzeln, tief verwurzelt in den VAE. 20+ Jahre Unternehmer, 15+ Jahre Marketing. Er versteht beide Welten — und spricht Ihre Sprache.</p>
-      <div class="m1-karim-links">
-        <a href="tel:+971503730906">📞 +971 50 373 09 06</a>
-        <a href="https://startuphilfedubai.de">🌐 startuphilfedubai.de</a>
+    <div class="m1-karim-photo">
+      <img src="karim1.jpg" alt="Karim Loreti Hassan">
+      <div class="m1-karim-overlay"></div>
+      <div class="m1-karim-overlay2"></div>
+      <div class="m1-karim-right">
+        <span class="m1-eyebrow">Ihr Ansprechpartner</span>
+        <h3>Karim Loreti Hassan</h3>
+        <p>In Rom geboren, in Berlin aufgewachsen. 20+ Jahre Unternehmer, 15+ Jahre Marketing. Er versteht beide Welten — und spricht Ihre Sprache.</p>
+      </div>
+      <div class="m1-karim-bottom">
+        <span class="kname">Karim Loreti Hassan</span>
+        <span class="ktitle">Dubai Business Experte · 20+ Jahre Erfahrung</span>
+        <div class="klinks">
+          <a href="tel:+971503730906">📞 +971 50 373 09 06</a>
+          <a href="https://startuphilfedubai.de">🌐 startuphilfedubai.de</a>
+        </div>
       </div>
     </div>
   </div>
@@ -342,14 +363,21 @@ body { background:#e8ecf0; font-family:'Inter',sans-serif; padding:60px 20px; }
   </div>
 
   <div class="m2-karim">
-    <div class="m2-karim-box">KLH</div>
-    <div class="m2-karim-info">
+    <img src="karim2.jpg" alt="Karim Loreti Hassan">
+    <div class="m2-karim-grad"></div>
+    <div class="m2-karim-grad2"></div>
+    <div class="m2-karim-namebar">
+      <span>Karim Loreti Hassan</span>
+      <small>Gründungsberater · Dubai</small>
+    </div>
+    <div class="m2-karim-content">
       <span class="tag">Ihr Berater</span>
       <h3>Karim Loreti Hassan</h3>
-      <p>In Rom geboren, in Berlin aufgewachsen. 20+ Jahre Unternehmer, 15+ Jahre Marketing. Er kennt beide Welten und spricht Deutsch, Englisch, Arabisch und Italienisch.</p>
-      <a href="tel:+971503730906">📞 +971 50 373 09 06</a>
-      <a href="https://wa.me/971503730906">💬 WhatsApp</a>
-      <a href="https://startuphilfedubai.de">🌐 Website</a>
+      <p>In Rom geboren, in Berlin aufgewachsen. 20+ Jahre Unternehmer, 15+ Jahre Marketing. Spricht Deutsch, Englisch, Arabisch und Italienisch.</p>
+      <div>
+        <a href="tel:+971503730906">📞 +971 50 373 09 06</a>
+        <a href="https://wa.me/971503730906">💬 WhatsApp</a>
+      </div>
     </div>
   </div>
 
@@ -420,12 +448,12 @@ body { background:#e8ecf0; font-family:'Inter',sans-serif; padding:60px 20px; }
   </div>
 
   <div class="m3-karim">
-    <div class="m3-karim-photo">KLH</div>
-    <div class="m3-karim-text">
+    <img src="karim3.jpg" alt="Karim Loreti Hassan">
+    <div class="m3-karim-grad"></div>
+    <div class="m3-karim-content">
       <span class="tag">Gründer &amp; Berater</span>
       <h3>Karim Loreti Hassan</h3>
-      <p>In Rom geboren, in Berlin aufgewachsen. Ägyptische Wurzeln, Familie in den VAE. 20+ Jahre Unternehmer, 15+ Jahre Marketing.</p>
-      <p><em>"Ich helfe Gründern, die Fehler zu vermeiden, die ich selbst gemacht habe."</em></p>
+      <p>"Ich helfe Gründern, die Fehler zu vermeiden, die ich selbst gemacht habe."</p>
       <div class="m3-karim-links">
         <a href="tel:+971503730906">📞 +971 50 373 09 06</a>
         <a href="https://wa.me/971503730906">💬 WhatsApp</a>
