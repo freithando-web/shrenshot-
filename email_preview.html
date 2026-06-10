@@ -7,251 +7,267 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
-body { background:#111; font-family:'Inter',sans-serif; padding:60px 20px; }
+body { background:#e8ecf0; font-family:'Inter',sans-serif; padding:60px 20px; }
+
+/* Logo colors:
+   Blue:  #1A56FF
+   Green: #00E5A0
+   White: #ffffff
+*/
+
 .divider { text-align:center; margin:80px 0 36px; }
-.divider span { font-size:9px; color:#444; letter-spacing:4px; text-transform:uppercase; border:1px solid #2a2a2a; padding:7px 18px; border-radius:20px; }
+.divider span { font-size:9px; color:#888; letter-spacing:4px; text-transform:uppercase; border:1px solid #ccc; padding:7px 18px; border-radius:20px; background:#fff; }
 .email { width:600px; margin:0 auto; overflow:hidden; }
 
-
-/* ══════════════════════════════════════════
-   MAIL 1 — Dark & Bold
-   Look: Dunkel, groß, dramatisch, wie ein
-   High-End Magazine Cover + Agency Feel
-══════════════════════════════════════════ */
-.m1 { background:#0a0a0a; }
-
-.m1-header { padding:18px 36px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #1e1e1e; }
-.logo { display:flex; align-items:center; gap:9px; }
-.lc { width:30px; height:30px; background:#1A56FF; border-radius:50%; display:flex; align-items:center; justify-content:center; }
+/* Shared logo component */
+.logo { display:flex; align-items:center; gap:9px; text-decoration:none; }
+.lc { width:30px; height:30px; background:#1A56FF; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
 .li { display:flex; gap:2px; align-items:flex-end; }
 .ld { background:#00E5A0; border-radius:50%; }
 .ld1 { width:6px;height:6px; }
 .ld2 { width:4px;height:4px;margin-bottom:1px; }
 .lb { width:2.5px;height:11px;background:#00E5A0;border-radius:1.5px;margin-left:1px; }
-.ln { font-size:8px;font-weight:800;color:#fff;letter-spacing:2.5px;text-transform:uppercase;line-height:1.3; }
-.m1-header-right { font-size:9px;color:#333;letter-spacing:2px;text-transform:uppercase; }
+.ln-dark { font-size:8px;font-weight:800;color:#0a0a0a;letter-spacing:2px;text-transform:uppercase;line-height:1.3; }
+.ln-white { font-size:8px;font-weight:800;color:#fff;letter-spacing:2px;text-transform:uppercase;line-height:1.3; }
 
-.m1-hero { position:relative;height:460px;overflow:hidden; }
-.m1-hero img { width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;filter:brightness(0.45); }
-.m1-hero-overlay { position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,10,0.6) 0%,transparent 60%); }
+
+/* ══════════════════════════════════════════════
+   MAIL 1 — Bold Hero / Blue & White
+   Weisser Hintergrund, blauer Header-Strip,
+   grüne Akzente, klare Struktur
+══════════════════════════════════════════════ */
+.m1 { background:#fff; }
+
+.m1-topstrip { background:#1A56FF; padding:12px 36px; display:flex; align-items:center; justify-content:space-between; }
+.m1-topstrip-right { font-size:9px;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase; }
+
+.m1-hero { position:relative; height:440px; overflow:hidden; }
+.m1-hero img { width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block; }
+.m1-hero-overlay { position:absolute;inset:0;background:linear-gradient(to bottom, rgba(26,86,255,0.55) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.6) 100%); }
 .m1-hero-content { position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:44px 40px; }
-.m1-issue { font-size:9px;color:#C9A84C;letter-spacing:4px;text-transform:uppercase;font-weight:700;margin-bottom:16px; }
-.m1-hero-content h1 { font-family:'Playfair Display',serif;font-size:52px;font-weight:900;line-height:1.0;color:#fff;letter-spacing:-1px;margin-bottom:18px; }
-.m1-hero-content h1 em { color:#C9A84C;font-style:italic; }
-.m1-hero-sub { font-size:14px;color:rgba(255,255,255,0.6);line-height:1.6;max-width:380px;font-weight:400; }
+.m1-badge { display:inline-flex;align-items:center;gap:6px;background:#00E5A0;color:#0a0a0a;font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;border-radius:2px;margin-bottom:16px;width:fit-content; }
+.m1-hero-content h1 { font-family:'Playfair Display',serif;font-size:50px;font-weight:900;line-height:1.0;color:#fff;letter-spacing:-1px;margin-bottom:16px; }
+.m1-hero-content h1 em { color:#00E5A0;font-style:italic; }
+.m1-hero-content p { font-size:15px;color:rgba(255,255,255,0.82);line-height:1.65;max-width:400px; }
 
-.m1-stats { display:flex;background:#C9A84C; }
-.m1-stat { flex:1;text-align:center;padding:18px 8px;border-right:1px solid rgba(0,0,0,0.1); }
+.m1-stats { display:flex; }
+.m1-stat { flex:1;text-align:center;padding:20px 8px;background:#1A56FF;border-right:1px solid rgba(255,255,255,0.15); }
 .m1-stat:last-child { border:none; }
-.m1-stat-val { font-size:22px;font-weight:900;color:#0a0a0a;display:block;line-height:1; }
-.m1-stat-label { font-size:8px;color:rgba(0,0,0,0.55);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;display:block; }
+.m1-stat-val { font-size:22px;font-weight:900;color:#fff;display:block;line-height:1; }
+.m1-stat-lbl { font-size:8px;color:rgba(255,255,255,0.55);letter-spacing:1.5px;text-transform:uppercase;margin-top:5px;display:block; }
 
-.m1-body { padding:48px 40px;background:#0a0a0a; }
-.m1-eyebrow { font-size:9px;color:#C9A84C;letter-spacing:3px;text-transform:uppercase;font-weight:700;margin-bottom:14px;display:block; }
-.m1-body h2 { font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:#fff;line-height:1.25;margin-bottom:20px;letter-spacing:-0.3px; }
-.m1-body p { font-size:14px;color:rgba(255,255,255,0.55);line-height:1.85;margin-bottom:14px; }
-.m1-body p strong { color:rgba(255,255,255,0.85); }
+.m1-body { padding:48px 40px;background:#fff; }
+.m1-eyebrow { font-size:9px;color:#1A56FF;letter-spacing:3px;text-transform:uppercase;font-weight:800;margin-bottom:12px;display:block; }
+.m1-body h2 { font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:#0a0a0a;line-height:1.25;margin-bottom:20px; }
+.m1-body p { font-size:14px;color:#444;line-height:1.85;margin-bottom:14px; }
+.m1-body p strong { color:#0a0a0a; }
+.m1-callout { background:#f0f5ff;border-left:3px solid #1A56FF;padding:16px 20px;margin:20px 0;border-radius:0 4px 4px 0; }
+.m1-callout p { font-size:13.5px;color:#1a1a1a;margin:0;line-height:1.7; }
 
-.m1-services { display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#1a1a1a;margin:0; }
-.m1-srv { background:#111;padding:24px 22px; }
-.m1-srv-num { font-size:9px;color:#C9A84C;letter-spacing:2px;font-weight:700;margin-bottom:10px;display:block; }
-.m1-srv h4 { font-size:13px;font-weight:700;color:#fff;margin-bottom:6px; }
-.m1-srv p { font-size:12px;color:rgba(255,255,255,0.4);line-height:1.65;margin:0; }
+.m1-services { display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#eef2ff;margin:0; }
+.m1-srv { background:#fff;padding:24px 22px;border-left:3px solid transparent;transition:all 0.2s; }
+.m1-srv:hover { border-left-color:#00E5A0; }
+.m1-srv-num { font-size:9px;color:#00E5A0;letter-spacing:2px;font-weight:800;margin-bottom:10px;display:block; }
+.m1-srv h4 { font-size:13px;font-weight:700;color:#0a0a0a;margin-bottom:6px; }
+.m1-srv p { font-size:12px;color:#777;line-height:1.65;margin:0; }
 
-.m1-karim { display:flex;background:#0f0f0f;border-top:1px solid #1e1e1e; }
-.m1-karim-photo { width:160px;flex-shrink:0;background:linear-gradient(145deg,#0d1f35,#0a1525);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;min-height:200px; }
-.m1-monogram { width:60px;height:60px;border:1.5px solid rgba(201,168,76,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#C9A84C;letter-spacing:1px; }
-.m1-karim-photo span { font-size:8px;color:rgba(201,168,76,0.3);letter-spacing:2px;text-transform:uppercase;text-align:center; }
+.m1-karim { display:flex;background:#f7f9ff;border-top:3px solid #00E5A0; }
+.m1-karim-img { width:160px;flex-shrink:0;background:linear-gradient(145deg,#1A56FF,#0d3bcc);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;min-height:200px; }
+.m1-monogram { width:60px;height:60px;border:2px solid rgba(0,229,160,0.5);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#00E5A0; }
+.m1-karim-img span { font-size:8px;color:rgba(255,255,255,0.3);letter-spacing:2px;text-transform:uppercase;text-align:center;padding:0 12px; }
 .m1-karim-text { flex:1;padding:28px 26px; }
-.m1-karim-text .m1-eyebrow { margin-bottom:8px; }
-.m1-karim-text h3 { font-size:17px;font-weight:800;color:#fff;margin-bottom:10px; }
-.m1-karim-text p { font-size:12.5px;color:rgba(255,255,255,0.5);line-height:1.75;margin-bottom:8px; }
+.m1-karim-text h3 { font-size:17px;font-weight:800;color:#0a0a0a;margin-bottom:8px; }
+.m1-karim-text p { font-size:12.5px;color:#555;line-height:1.75;margin-bottom:8px; }
 .m1-karim-links { margin-top:14px;display:flex;flex-direction:column;gap:5px; }
-.m1-karim-links a { font-size:11.5px;color:#C9A84C;text-decoration:none;font-weight:600; }
+.m1-karim-links a { font-size:11.5px;color:#1A56FF;text-decoration:none;font-weight:700; }
 
-.m1-cta { padding:48px 40px;text-align:center;background:#0a0a0a;border-top:1px solid #1a1a1a; }
-.m1-cta p { font-size:14px;color:rgba(255,255,255,0.45);line-height:1.7;margin-bottom:28px;max-width:380px;margin-left:auto;margin-right:auto; }
-.m1-btn { display:inline-block;background:#C9A84C;color:#0a0a0a;font-size:12px;font-weight:800;padding:14px 40px;border-radius:2px;text-decoration:none;letter-spacing:2px;text-transform:uppercase; }
-.m1-cta-note { font-size:10px;color:#333;margin-top:12px;display:block;letter-spacing:1px; }
+.m1-cta { padding:48px 40px;text-align:center;background:#1A56FF; }
+.m1-cta p { font-size:14px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:28px;max-width:380px;margin-left:auto;margin-right:auto; }
+.m1-btn { display:inline-block;background:#00E5A0;color:#0a0a0a;font-size:12px;font-weight:800;padding:15px 40px;border-radius:3px;text-decoration:none;letter-spacing:2px;text-transform:uppercase; }
+.m1-cta-note { font-size:10px;color:rgba(255,255,255,0.4);margin-top:12px;display:block;letter-spacing:1px; }
 
-.m1-footer { background:#050505;padding:24px 40px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid #151515; }
-.m1-footer-links { font-size:10px;color:#2a2a2a; }
-.m1-footer-links a { color:#3a3a3a;text-decoration:none; }
+.m1-footer { background:#0a0f1e;padding:22px 40px;display:flex;align-items:center;justify-content:space-between; }
+.m1-footer-txt { font-size:10px;color:rgba(255,255,255,0.2);line-height:1.8; }
+.m1-footer-txt a { color:rgba(0,229,160,0.4);text-decoration:none; }
 .m1-socials { display:flex;gap:8px; }
-.m1-soc { width:26px;height:26px;border:1px solid #222;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;color:#444;text-decoration:none;font-weight:700; }
+.m1-soc { width:26px;height:26px;border:1px solid rgba(255,255,255,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;color:rgba(255,255,255,0.3);text-decoration:none;font-weight:700; }
 
 
-/* ══════════════════════════════════════════
-   MAIL 2 — Clean & Editorial
-   Look: Weiss, luftig, Magazine-Layout,
-   Split-Sections, warme Akzente
-══════════════════════════════════════════ */
+/* ══════════════════════════════════════════════
+   MAIL 2 — Editorial / Split Layout
+   Weiss mit blauen & grünen Akzenten,
+   sauberes Magazine-Grid, keine dunklen Böcke
+══════════════════════════════════════════════ */
 .m2 { background:#fff; }
 
-.m2-header { background:#fff;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #f5f0e8; }
-.m2-header-center { font-family:'Playfair Display',serif;font-size:11px;color:#999;letter-spacing:1px;font-style:italic; }
+.m2-header { padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #eef2ff; }
+.m2-header-meta { font-size:9px;color:#aaa;letter-spacing:2px;text-transform:uppercase; }
 
 .m2-hero { position:relative;height:360px;overflow:hidden; }
 .m2-hero img { width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block; }
-.m2-hero-bar { position:absolute;bottom:0;left:0;right:0;background:#fff;padding:24px 40px; }
-.m2-hero-bar .tag { font-size:9px;color:#C9A84C;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:8px; }
-.m2-hero-bar h1 { font-family:'Playfair Display',serif;font-size:32px;font-weight:900;color:#0a0a0a;line-height:1.15;letter-spacing:-0.5px; }
+.m2-hero-bar { position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to right,#fff 0%,#fff 70%,rgba(255,255,255,0) 100%);padding:28px 40px 28px; }
+.m2-hero-bar .tag { font-size:9px;color:#1A56FF;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:8px; }
+.m2-hero-bar h1 { font-family:'Playfair Display',serif;font-size:30px;font-weight:900;color:#0a0a0a;line-height:1.15;letter-spacing:-0.5px;max-width:340px; }
 
-.m2-intro { padding:36px 40px;background:#fff;border-bottom:1px solid #f0f0f0; }
-.m2-intro p { font-size:16px;color:#444;line-height:1.85;font-weight:400; }
-.m2-intro p strong { color:#0a0a0a; }
+.m2-intro { padding:36px 40px;border-bottom:2px solid #eef2ff; }
+.m2-intro p { font-size:15px;color:#444;line-height:1.85; }
+.m2-intro p strong { color:#1A56FF; }
 
-.m2-split { display:flex;border-bottom:1px solid #f0f0f0; }
-.m2-split-left { width:200px;flex-shrink:0;background:#f8f5ef;padding:32px 28px;border-right:1px solid #ede8de; }
-.m2-split-left .step-n { font-size:48px;font-weight:900;color:#C9A84C;line-height:1;display:block;margin-bottom:10px;font-family:'Playfair Display',serif; }
-.m2-split-left h4 { font-size:13px;font-weight:800;color:#0a0a0a;line-height:1.3; }
-.m2-split-right { flex:1;padding:32px 28px; }
-.m2-split-right p { font-size:13.5px;color:#555;line-height:1.8;margin:0; }
+/* Steps split */
+.m2-step { display:flex;border-bottom:1px solid #f0f4ff; }
+.m2-step:last-of-type { border-bottom:none; }
+.m2-step-left { width:180px;flex-shrink:0;background:#f7f9ff;padding:28px;border-right:1px solid #eef2ff;display:flex;flex-direction:column;justify-content:flex-start; }
+.m2-step-num { font-family:'Playfair Display',serif;font-size:48px;font-weight:900;color:#1A56FF;line-height:1;display:block;margin-bottom:8px; }
+.m2-step-left h4 { font-size:12px;font-weight:800;color:#0a0a0a;line-height:1.35; }
+.m2-step-right { flex:1;padding:28px; }
+.m2-step-right p { font-size:13.5px;color:#555;line-height:1.8;margin:0; }
 
-.m2-highlight { background:#0f1923;padding:36px 40px;display:flex;align-items:center;gap:28px; }
-.m2-highlight-num { font-size:64px;font-weight:900;color:#C9A84C;line-height:1;font-family:'Playfair Display',serif;flex-shrink:0; }
-.m2-highlight-text h3 { font-size:18px;font-weight:800;color:#fff;margin-bottom:8px; }
-.m2-highlight-text p { font-size:13px;color:rgba(255,255,255,0.55);line-height:1.7;margin:0; }
+.m2-green-banner { background:#00E5A0;padding:28px 40px;display:flex;align-items:center;gap:24px; }
+.m2-green-banner-num { font-family:'Playfair Display',serif;font-size:60px;font-weight:900;color:#fff;line-height:1;flex-shrink:0; }
+.m2-green-banner-text h3 { font-size:17px;font-weight:800;color:#0a0a0a;margin-bottom:6px; }
+.m2-green-banner-text p { font-size:13px;color:rgba(0,0,0,0.6);line-height:1.65;margin:0; }
 
-.m2-karim-full { background:#fff;padding:36px 40px;display:flex;gap:24px;align-items:flex-start;border-top:3px solid #C9A84C; }
-.m2-karim-avatar { width:80px;height:80px;background:linear-gradient(145deg,#0d1f35,#162f50);border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#C9A84C; }
-.m2-karim-info { flex:1; }
-.m2-karim-info .tag { font-size:9px;color:#C9A84C;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:8px; }
-.m2-karim-info h3 { font-size:20px;font-weight:800;color:#0a0a0a;margin-bottom:8px; }
+.m2-karim { padding:36px 40px;background:#fff;display:flex;gap:22px;align-items:flex-start;border-top:3px solid #1A56FF; }
+.m2-karim-box { width:76px;height:76px;background:#1A56FF;border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#00E5A0; }
+.m2-karim-info .tag { font-size:9px;color:#1A56FF;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:8px; }
+.m2-karim-info h3 { font-size:19px;font-weight:800;color:#0a0a0a;margin-bottom:8px; }
 .m2-karim-info p { font-size:13px;color:#666;line-height:1.75;margin-bottom:6px; }
-.m2-karim-info a { font-size:12px;font-weight:700;color:#0f1923;text-decoration:none;display:inline-block;margin-right:16px; }
+.m2-karim-info a { font-size:12px;font-weight:700;color:#1A56FF;text-decoration:none;margin-right:16px;display:inline-block;margin-top:8px; }
 
-.m2-cta { background:#f8f5ef;padding:48px 40px;text-align:center;border-top:1px solid #ede8de; }
-.m2-cta h2 { font-family:'Playfair Display',serif;font-size:30px;font-weight:900;color:#0a0a0a;margin-bottom:12px;line-height:1.2; }
+.m2-cta { background:#f7f9ff;padding:48px 40px;text-align:center;border-top:1px solid #eef2ff; }
+.m2-cta h2 { font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:#0a0a0a;margin-bottom:12px; }
 .m2-cta p { font-size:14px;color:#777;line-height:1.7;max-width:360px;margin:0 auto 28px; }
-.m2-btn { display:inline-block;background:#0f1923;color:#fff;font-size:13px;font-weight:700;padding:15px 38px;text-decoration:none;letter-spacing:0.5px; }
+.m2-btn { display:inline-block;background:#1A56FF;color:#fff;font-size:13px;font-weight:700;padding:15px 38px;text-decoration:none;letter-spacing:0.5px;border-radius:4px; }
 .m2-cta-note { font-size:10px;color:#aaa;display:block;margin-top:12px;letter-spacing:1px; }
 
-.m2-footer { background:#0f1923;padding:24px 40px;display:flex;align-items:center;justify-content:space-between; }
-.m2-footer-text { font-size:10px;color:rgba(255,255,255,0.2);line-height:1.8; }
-.m2-footer-text a { color:rgba(201,168,76,0.5);text-decoration:none; }
+.m2-footer { background:#1A56FF;padding:22px 40px;display:flex;align-items:center;justify-content:space-between; }
+.m2-footer-txt { font-size:10px;color:rgba(255,255,255,0.4);line-height:1.8; }
+.m2-footer-txt a { color:rgba(0,229,160,0.7);text-decoration:none; }
 .m2-socials { display:flex;gap:8px; }
-.m2-soc { width:26px;height:26px;border:1px solid rgba(255,255,255,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;color:rgba(255,255,255,0.3);text-decoration:none;font-weight:700; }
+.m2-soc { width:26px;height:26px;border:1px solid rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;color:rgba(255,255,255,0.5);text-decoration:none;font-weight:700; }
 
 
-/* ══════════════════════════════════════════
-   MAIL 3 — Warm & Personal
-   Look: Sahne/Creme Hintergrund, grosse
-   Zitate, persönlich & emotional
-══════════════════════════════════════════ */
-.m3 { background:#faf7f2; }
+/* ══════════════════════════════════════════════
+   MAIL 3 — Warm Cards / Testimonial Focus
+   Hellblauer Hintergrund, weisse Cards,
+   grüne CTA-Sektion
+══════════════════════════════════════════════ */
+.m3 { background:#eef3ff; }
 
-.m3-header { background:#faf7f2;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ede5d8; }
-.m3-header-right { font-size:9px;color:#bbb;letter-spacing:2px;text-transform:uppercase; }
+.m3-header { background:#fff;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #eef2ff; }
+.m3-header-right { font-size:9px;color:#aaa;letter-spacing:2px;text-transform:uppercase; }
 
 .m3-hero { position:relative;height:340px;overflow:hidden; }
 .m3-hero img { width:100%;height:100%;object-fit:cover;object-position:center 50%;display:block; }
-.m3-hero-caption { position:absolute;bottom:0;left:0;right:0;padding:28px 40px;background:linear-gradient(to top,rgba(250,247,242,1) 0%,rgba(250,247,242,0) 100%); }
-.m3-hero-caption .tag { font-size:9px;color:#C9A84C;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:8px; }
-.m3-hero-caption h1 { font-family:'Playfair Display',serif;font-size:34px;font-weight:900;color:#1a1208;line-height:1.15;letter-spacing:-0.5px; }
+.m3-hero-overlay { position:absolute;inset:0;background:linear-gradient(to top,rgba(238,243,255,1) 0%,rgba(26,86,255,0.3) 60%,rgba(26,86,255,0.5) 100%); }
+.m3-hero-content { position:absolute;top:0;left:0;right:0;padding:32px 40px; }
+.m3-hero-content .tag { font-size:9px;color:#00E5A0;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:10px; }
+.m3-hero-content h1 { font-family:'Playfair Display',serif;font-size:34px;font-weight:900;color:#fff;line-height:1.15;letter-spacing:-0.5px;text-shadow:0 2px 12px rgba(0,0,0,0.2); }
 
-.m3-stats-row { display:flex;background:#1a1208;padding:0; }
-.m3-stat { flex:1;padding:20px 12px;text-align:center;border-right:1px solid rgba(255,255,255,0.05); }
-.m3-stat:last-child{border:none;}
-.m3-stat-val { font-size:26px;font-weight:900;color:#C9A84C;display:block;line-height:1;font-family:'Playfair Display',serif; }
-.m3-stat-lbl { font-size:9px;color:rgba(255,255,255,0.35);letter-spacing:1.5px;text-transform:uppercase;margin-top:5px;display:block; }
+.m3-stats { display:flex;background:#fff;margin:0 20px;border-radius:8px;overflow:hidden;box-shadow:0 4px 20px rgba(26,86,255,0.1);position:relative;z-index:2;margin-top:-24px; }
+.m3-stat { flex:1;text-align:center;padding:20px 8px;border-right:1px solid #eef2ff; }
+.m3-stat:last-child { border:none; }
+.m3-stat-val { font-size:24px;font-weight:900;color:#1A56FF;display:block;line-height:1;font-family:'Playfair Display',serif; }
+.m3-stat-lbl { font-size:8px;color:#aaa;letter-spacing:1.5px;text-transform:uppercase;margin-top:5px;display:block; }
 
-.m3-intro { padding:44px 40px;background:#faf7f2; }
-.m3-intro .tag { font-size:9px;color:#C9A84C;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:14px; }
-.m3-intro h2 { font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#1a1208;margin-bottom:18px;line-height:1.3; }
-.m3-intro p { font-size:14px;color:#6b5c45;line-height:1.85;margin-bottom:12px; }
+.m3-section { padding:44px 40px;background:#eef3ff; }
+.m3-section .tag { font-size:9px;color:#1A56FF;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:12px; }
+.m3-section h2 { font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#0a0a0a;margin-bottom:16px;line-height:1.3; }
+.m3-section p { font-size:14px;color:#555;line-height:1.85;margin-bottom:12px; }
 
-.m3-quote-block { padding:0 40px 40px;background:#faf7f2; }
-.m3-quote { background:#fff;border:1px solid #ede5d8;padding:32px;margin-bottom:16px;position:relative; }
-.m3-quote::before { content:'"';font-family:'Playfair Display',serif;font-size:80px;color:#ede5d8;position:absolute;top:-10px;left:24px;line-height:1; }
-.m3-quote-text { font-size:15px;color:#3a2e1e;line-height:1.85;margin-bottom:20px;padding-top:30px;font-style:italic; }
-.m3-quote-author { display:flex;align-items:center;gap:12px;border-top:1px solid #f0ead8;padding-top:16px; }
-.m3-quote-avatar { width:36px;height:36px;background:#ede5d8;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#8a7055;flex-shrink:0; }
-.m3-quote-meta strong { font-size:12px;color:#1a1208;font-weight:700;display:block; }
-.m3-quote-meta span { font-size:11px;color:#aaa; }
+/* Quote cards */
+.m3-cards { padding:0 20px 32px;display:flex;flex-direction:column;gap:16px;background:#eef3ff; }
+.m3-card { background:#fff;border-radius:8px;padding:28px;box-shadow:0 2px 16px rgba(26,86,255,0.08); }
+.m3-card-quote { font-size:36px;color:#1A56FF;font-family:'Playfair Display',serif;line-height:1;display:block;margin-bottom:12px;opacity:0.3; }
+.m3-card-text { font-size:14.5px;color:#2a2a2a;line-height:1.85;margin-bottom:20px;font-style:italic; }
+.m3-card-author { display:flex;align-items:center;gap:12px;border-top:1px solid #eef2ff;padding-top:16px; }
+.m3-card-avatar { width:38px;height:38px;background:#1A56FF;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#fff;flex-shrink:0; }
+.m3-card-meta strong { font-size:12px;color:#0a0a0a;font-weight:700;display:block; }
+.m3-card-meta span { font-size:11px;color:#aaa; }
 
-.m3-karim-section { background:#1a1208;padding:40px; }
-.m3-karim-section .tag { font-size:9px;color:#C9A84C;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:18px; }
-.m3-karim-inner { display:flex;gap:24px;align-items:flex-start; }
-.m3-karim-photo { width:90px;height:90px;background:linear-gradient(145deg,#2a1f0d,#3a2e1a);border-radius:50%;border:2px solid rgba(201,168,76,0.3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#C9A84C; }
-.m3-karim-info h3 { font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:10px;line-height:1.2; }
-.m3-karim-info p { font-size:13px;color:rgba(255,255,255,0.5);line-height:1.8;margin-bottom:8px; }
-.m3-karim-info em { color:rgba(255,255,255,0.75);font-style:italic; }
-.m3-karim-links { margin-top:16px;display:flex;gap:16px;flex-wrap:wrap; }
-.m3-karim-links a { font-size:11px;font-weight:700;color:#C9A84C;text-decoration:none;letter-spacing:0.5px; }
+.m3-karim { background:#fff;margin:0 20px;border-radius:8px;padding:28px;box-shadow:0 2px 16px rgba(26,86,255,0.08);display:flex;gap:20px;margin-bottom:32px; }
+.m3-karim-photo { width:80px;height:80px;background:#1A56FF;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#00E5A0; }
+.m3-karim-text .tag { font-size:9px;color:#1A56FF;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:6px; }
+.m3-karim-text h3 { font-size:18px;font-weight:800;color:#0a0a0a;margin-bottom:8px; }
+.m3-karim-text p { font-size:13px;color:#666;line-height:1.75;margin-bottom:6px; }
+.m3-karim-text em { color:#1A56FF;font-style:italic; }
+.m3-karim-links { margin-top:12px;display:flex;gap:16px;flex-wrap:wrap; }
+.m3-karim-links a { font-size:11px;font-weight:700;color:#1A56FF;text-decoration:none; }
 
-.m3-why { padding:40px;background:#faf7f2;border-top:1px solid #ede5d8; }
-.m3-why .tag { font-size:9px;color:#C9A84C;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:12px; }
-.m3-why h2 { font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#1a1208;margin-bottom:16px; }
-.m3-why p { font-size:14px;color:#6b5c45;line-height:1.85;margin-bottom:12px; }
-.m3-pullquote { border-left:3px solid #C9A84C;padding:14px 20px;background:#fff;margin:20px 0;font-size:14px;color:#3a2e1e;line-height:1.7;font-style:italic; }
-.m3-pullquote strong { font-style:normal;color:#1a1208; }
+.m3-why { padding:36px 40px;background:#eef3ff; }
+.m3-why .tag { font-size:9px;color:#1A56FF;letter-spacing:3px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:10px; }
+.m3-why h2 { font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#0a0a0a;margin-bottom:14px; }
+.m3-why p { font-size:14px;color:#555;line-height:1.85;margin-bottom:12px; }
+.m3-pullquote { background:#fff;border-left:4px solid #00E5A0;padding:14px 20px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#333;line-height:1.7;font-style:italic; }
+.m3-pullquote strong { font-style:normal;color:#0a0a0a; }
 
-.m3-cta { background:#C9A84C;padding:52px 40px;text-align:center; }
-.m3-cta h2 { font-family:'Playfair Display',serif;font-size:32px;font-weight:900;color:#0a0a0a;margin-bottom:12px;line-height:1.15; }
-.m3-cta p { font-size:14px;color:rgba(0,0,0,0.6);line-height:1.7;max-width:360px;margin:0 auto 30px; }
-.m3-btn { display:inline-block;background:#0a0a0a;color:#fff;font-size:13px;font-weight:700;padding:15px 40px;text-decoration:none;letter-spacing:1px;text-transform:uppercase; }
+.m3-cta { background:#00E5A0;padding:52px 40px;text-align:center; }
+.m3-cta h2 { font-family:'Playfair Display',serif;font-size:30px;font-weight:900;color:#0a0a0a;margin-bottom:12px;line-height:1.2; }
+.m3-cta p { font-size:14px;color:rgba(0,0,0,0.6);line-height:1.7;max-width:360px;margin:0 auto 28px; }
+.m3-btn { display:inline-block;background:#1A56FF;color:#fff;font-size:13px;font-weight:700;padding:15px 40px;text-decoration:none;letter-spacing:0.5px;border-radius:4px; }
 .m3-cta-note { font-size:10px;color:rgba(0,0,0,0.4);display:block;margin-top:14px;letter-spacing:1px; }
 
-.m3-footer { background:#120e07;padding:24px 40px;display:flex;align-items:center;justify-content:space-between; }
-.m3-footer-text { font-size:10px;color:rgba(255,255,255,0.18);line-height:1.8; }
-.m3-footer-text a { color:rgba(201,168,76,0.4);text-decoration:none; }
+.m3-footer { background:#0a1433;padding:22px 40px;display:flex;align-items:center;justify-content:space-between; }
+.m3-footer-txt { font-size:10px;color:rgba(255,255,255,0.22);line-height:1.8; }
+.m3-footer-txt a { color:rgba(0,229,160,0.5);text-decoration:none; }
 .m3-socials { display:flex;gap:8px; }
-.m3-soc { width:26px;height:26px;border:1px solid rgba(255,255,255,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;color:rgba(255,255,255,0.25);text-decoration:none;font-weight:700; }
+.m3-soc { width:26px;height:26px;border:1px solid rgba(255,255,255,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;color:rgba(255,255,255,0.3);text-decoration:none;font-weight:700; }
 </style>
 </head>
 <body>
 
 
 <!-- ══════════════════════════════
-     MAIL 1 — Dark & Bold
+     MAIL 1 — Bold Hero
 ══════════════════════════════ -->
 <div class="divider"><span>Ausgabe 01 &nbsp;·&nbsp; Warum Dubai?</span></div>
 <div class="email m1">
 
-  <div class="m1-header">
-    <div class="logo"><div class="lc"><div class="li"><div class="ld ld1"></div><div class="ld ld2"></div><div class="lb"></div></div></div><div class="ln">Startup Hilfe<br>Dubai</div></div>
-    <div class="m1-header-right">Ausgabe 01 · 2026</div>
+  <div class="m1-topstrip">
+    <div class="logo"><div class="lc"><div class="li"><div class="ld ld1"></div><div class="ld ld2"></div><div class="lb"></div></div></div><div class="ln-white">Startup Hilfe<br>Dubai</div></div>
+    <div class="m1-topstrip-right">Ausgabe 01 · 2026</div>
   </div>
 
   <div class="m1-hero">
     <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=90" alt="Dubai Nacht">
     <div class="m1-hero-overlay"></div>
     <div class="m1-hero-content">
-      <div class="m1-issue">Startup Hilfe Dubai &nbsp;·&nbsp; Newsletter</div>
+      <div class="m1-badge">Newsletter · Ausgabe 01</div>
       <h1>Dubai.<br><em>Klar.</em><br>Sicher.<br>Erfolgreich.</h1>
-      <p class="m1-hero-sub">Erfahren Sie, warum tausende europäische Gründer jedes Jahr dieselbe Entscheidung treffen — und warum sie es nie bereuen.</p>
+      <p>Erfahren Sie, warum tausende europäische Gründer jedes Jahr dieselbe Entscheidung treffen — und warum sie es nie bereuen.</p>
     </div>
   </div>
 
   <div class="m1-stats">
-    <div class="m1-stat"><span class="m1-stat-val">0%</span><span class="m1-stat-label">Einkommensteuer</span></div>
-    <div class="m1-stat"><span class="m1-stat-val">30</span><span class="m1-stat-label">Tage bis Gründung</span></div>
-    <div class="m1-stat"><span class="m1-stat-val">185+</span><span class="m1-stat-label">Nationalitäten</span></div>
-    <div class="m1-stat"><span class="m1-stat-val">100%</span><span class="m1-stat-label">Eigentümerschaft</span></div>
+    <div class="m1-stat"><span class="m1-stat-val">0%</span><span class="m1-stat-lbl">Einkommensteuer</span></div>
+    <div class="m1-stat"><span class="m1-stat-val">30</span><span class="m1-stat-lbl">Tage bis Gründung</span></div>
+    <div class="m1-stat"><span class="m1-stat-val">185+</span><span class="m1-stat-lbl">Nationalitäten</span></div>
+    <div class="m1-stat"><span class="m1-stat-val">100%</span><span class="m1-stat-lbl">Eigentümerschaft</span></div>
   </div>
 
   <div class="m1-body">
     <span class="m1-eyebrow">Der Standortvorteil</span>
     <h2>Warum Dubai kein Trend ist — sondern eine Strategie</h2>
-    <p>Dubai ist mehr als Luxus und Skyline. Es ist eines der unternehmerfreundlichsten Steuerregimes der Welt, kombiniert mit Infrastruktur auf Weltniveau und einem politisch stabilen Umfeld. <strong>Keine Einkommensteuer. Keine Kapitalertragsteuer. Volle Eigentümerschaft.</strong></p>
-    <p>Während Gründer in Europa mit Bürokratie kämpfen, eröffnen unsere Klienten ihr Konto. Während andere auf Genehmigungen warten, sind unsere Klienten bereits am Markt. Dubai hat die Spielregeln verändert — und wer es versteht, nutzt es.</p>
+    <p>Dubai ist mehr als Luxus und Skyline. Es ist eines der unternehmerfreundlichsten Steuerregimes der Welt, kombiniert mit Infrastruktur auf Weltniveau. <strong>Keine Einkommensteuer. Keine Kapitalertragsteuer. Volle Eigentümerschaft.</strong></p>
+    <p>Während Gründer in Europa mit Bürokratie kämpfen, eröffnen unsere Klienten ihr Konto. Während andere auf Genehmigungen warten, sind unsere Klienten bereits am Markt.</p>
+    <div class="m1-callout">
+      <p>💡 <strong>Wussten Sie?</strong> In den meisten Freezones der VAE ist 100% ausländisches Eigentum erlaubt — kein lokaler Partner notwendig. Volle Kontrolle, von Anfang an.</p>
+    </div>
   </div>
 
   <div class="m1-services">
-    <div class="m1-srv"><span class="m1-srv-num">01</span><h4>Freezone / Mainland / Offshore</h4><p>Rechtssichere Firmengründung, auf Ihr Modell zugeschnitten.</p></div>
+    <div class="m1-srv"><span class="m1-srv-num">01</span><h4>Freezone / Mainland / Offshore</h4><p>Rechtssichere Gründung, auf Ihr Modell zugeschnitten.</p></div>
     <div class="m1-srv"><span class="m1-srv-num">02</span><h4>Holdings &amp; Family Offices</h4><p>Komplexe Strukturen für anspruchsvolle Vermögen.</p></div>
-    <div class="m1-srv"><span class="m1-srv-num">03</span><h4>Bankkonto-Eröffnung</h4><p>Die richtigen Bankpartner. Die richtigen Konditionen.</p></div>
+    <div class="m1-srv"><span class="m1-srv-num">03</span><h4>Bankkonto-Eröffnung</h4><p>Die richtigen Bankpartner. Die besten Konditionen.</p></div>
     <div class="m1-srv"><span class="m1-srv-num">04</span><h4>Visa Management</h4><p>Investor-, Arbeits- und Golden Visa für die VAE.</p></div>
   </div>
 
   <div class="m1-karim">
-    <div class="m1-karim-photo"><div class="m1-monogram">KLH</div><span>Foto hier</span></div>
+    <div class="m1-karim-img"><div class="m1-monogram">KLH</div><span>Foto hier<br>einfügen</span></div>
     <div class="m1-karim-text">
       <span class="m1-eyebrow">Ihr Ansprechpartner</span>
       <h3>Karim Loreti Hassan</h3>
-      <p>In Rom geboren, in Berlin aufgewachsen. Ägyptische Wurzeln, tief verwurzelt in den VAE. 20+ Jahre Unternehmer, 15+ Jahre Marketing.</p>
-      <p>Er versteht beide Welten. Und er spricht Ihre Sprache — auf Deutsch.</p>
+      <p>In Rom geboren, in Berlin aufgewachsen. Ägyptische Wurzeln, tief verwurzelt in den VAE. 20+ Jahre Unternehmer, 15+ Jahre Marketing. Er versteht beide Welten — und spricht Ihre Sprache.</p>
       <div class="m1-karim-links">
         <a href="tel:+971503730906">📞 +971 50 373 09 06</a>
         <a href="https://startuphilfedubai.de">🌐 startuphilfedubai.de</a>
@@ -260,29 +276,28 @@ body { background:#111; font-family:'Inter',sans-serif; padding:60px 20px; }
   </div>
 
   <div class="m1-cta">
-    <p>Ein kostenloses Gespräch. Keine Verpflichtungen. Karim beantwortet Ihre Fragen — klar, direkt, auf Deutsch.</p>
+    <p>Ein kostenloses Gespräch mit Karim. Keine Verpflichtungen. Klare Antworten — auf Deutsch.</p>
     <a class="m1-btn" href="https://startuphilfedubai.de">Jetzt Gespräch buchen</a>
-    <span class="m1-cta-note">Kostenlos &nbsp;·&nbsp; Unverbindlich &nbsp;·&nbsp; Auf Deutsch</span>
+    <span class="m1-cta-note">Kostenlos · Unverbindlich · Auf Deutsch</span>
   </div>
 
   <div class="m1-footer">
-    <div class="logo"><div class="lc"><div class="li"><div class="ld ld1"></div><div class="ld ld2"></div><div class="lb"></div></div></div><div class="ln">Startup Hilfe<br>Dubai</div></div>
+    <div class="logo"><div class="lc"><div class="li"><div class="ld ld1"></div><div class="ld ld2"></div><div class="lb"></div></div></div><div class="ln-white">Startup Hilfe<br>Dubai</div></div>
     <div class="m1-socials"><a class="m1-soc" href="#">in</a><a class="m1-soc" href="#">▶</a><a class="m1-soc" href="#">✕</a></div>
-    <div class="m1-footer-links"><a href="#">Abmelden</a> &nbsp;·&nbsp; <a href="#">Einstellungen</a></div>
+    <div class="m1-footer-txt"><a href="#">Abmelden</a> · <a href="#">Einstellungen</a></div>
   </div>
 </div>
 
 
 <!-- ══════════════════════════════
-     MAIL 2 — Clean & Editorial
+     MAIL 2 — Editorial Split
 ══════════════════════════════ -->
 <div class="divider"><span>Ausgabe 02 &nbsp;·&nbsp; Der Prozess</span></div>
 <div class="email m2">
 
   <div class="m2-header">
-    <div class="logo"><div class="lc"><div class="li"><div class="ld ld1"></div><div class="ld ld2"></div><div class="lb"></div></div></div><div class="ln" style="color:#0a0a0a;">Startup Hilfe<br>Dubai</div></div>
-    <div class="m2-header-center">Ausgabe 02 · Der Gründungsprozess</div>
-    <div style="font-size:9px;color:#bbb;letter-spacing:1.5px;">2026</div>
+    <div class="logo"><div class="lc"><div class="li"><div class="ld ld1"></div><div class="ld ld2"></div><div class="lb"></div></div></div><div class="ln-dark">Startup Hilfe<br>Dubai</div></div>
+    <div class="m2-header-meta">Ausgabe 02 · Der Gründungsprozess</div>
   </div>
 
   <div class="m2-hero">
@@ -294,46 +309,124 @@ body { background:#111; font-family:'Inter',sans-serif; padding:60px 20px; }
   </div>
 
   <div class="m2-intro">
-    <p>Viele Gründer denken, eine Firmengründung in Dubai ist kompliziert. <strong>Mit der richtigen Begleitung ist sie es nicht.</strong> Hier ist der bewährte Prozess, den Karim Loreti Hassan mit über 300 Gründern gegangen ist — vollständig, klar und ohne Überraschungen.</p>
+    <p>Viele glauben, eine Firmengründung in Dubai ist kompliziert. <strong style="color:#1A56FF;">Mit der richtigen Begleitung ist sie es nicht.</strong> Hier ist der bewährte Prozess, den Karim mit über 300 Gründern gegangen ist — vollständig, klar und ohne Überraschungen.</p>
   </div>
 
-  <div class="m2-split">
-    <div class="m2-split-left"><span class="step-n">01</span><h4>Strategie &amp; Strukturwahl</h4></div>
-    <div class="m2-split-right"><p>Freezone, Mainland oder Offshore? Jede Struktur hat ihre Berechtigung — aber nicht für jeden. Karim analysiert Ihr Geschäftsmodell, Ihren Zielmarkt und Ihre steuerliche Situation und empfiehlt exakt das, was zu Ihnen passt. Mit konkreten Zahlen, ohne Fachchinesisch.</p></div>
+  <div class="m2-step">
+    <div class="m2-step-left"><span class="m2-step-num">01</span><h4>Strategie &amp; Strukturwahl</h4></div>
+    <div class="m2-step-right"><p>Freezone, Mainland oder Offshore? Karim analysiert Ihr Geschäftsmodell, Ihren Zielmarkt und Ihre steuerliche Situation — und empfiehlt exakt das, was zu Ihnen passt. Mit konkreten Zahlen, ohne Fachchinesisch.</p></div>
   </div>
-  <div class="m2-split">
-    <div class="m2-split-left"><span class="step-n">02</span><h4>Dokumente &amp; Vorbereitung</h4></div>
-    <div class="m2-split-right"><p>Vollständig beim ersten Mal — das spart Wochen. Karim gibt Ihnen eine präzise Checkliste aller Unterlagen und prüft persönlich, bevor etwas eingereicht wird. Kein hin und her mit Behörden.</p></div>
+  <div class="m2-step">
+    <div class="m2-step-left"><span class="m2-step-num">02</span><h4>Dokumente &amp; Vorbereitung</h4></div>
+    <div class="m2-step-right"><p>Vollständig beim ersten Mal — das spart Wochen. Karim gibt Ihnen eine präzise Checkliste und prüft alles persönlich, bevor es eingereicht wird.</p></div>
   </div>
-  <div class="m2-split">
-    <div class="m2-split-left"><span class="step-n">03</span><h4>Registrierung &amp; Lizenz</h4></div>
-    <div class="m2-split-right"><p>Namensprüfung, Lizenzbeantragung, Behördengänge — wir koordinieren alles. Sie müssen nicht vor Ort sein. Der gesamte Prozess läuft digital, persönlich begleitet von Karim.</p></div>
+  <div class="m2-step">
+    <div class="m2-step-left"><span class="m2-step-num">03</span><h4>Registrierung &amp; Lizenz</h4></div>
+    <div class="m2-step-right"><p>Namensprüfung, Lizenzbeantragung, Behördengänge — wir koordinieren alles. Sie müssen nicht vor Ort sein. Alles läuft digital, persönlich begleitet.</p></div>
   </div>
-  <div class="m2-split">
-    <div class="m2-split-left"><span class="step-n">04</span><h4>Bankkonto</h4></div>
-    <div class="m2-split-right"><p>Die Kontoeröffnung in Dubai ist ohne die richtigen Kontakte der schwierigste Schritt. Karim hat jahrelange Beziehungen zu den relevanten Banken und weiß genau, welches Institut zu welchem Profil passt.</p></div>
+  <div class="m2-step">
+    <div class="m2-step-left"><span class="m2-step-num">04</span><h4>Bankkonto eröffnen</h4></div>
+    <div class="m2-step-right"><p>Ohne die richtigen Kontakte ist das der schwierigste Schritt. Karim hat jahrelange Beziehungen zu den relevanten Banken — und weiß genau, welches Institut zu Ihrem Profil passt.</p></div>
   </div>
-  <div class="m2-split" style="border-bottom:none;">
-    <div class="m2-split-left"><span class="step-n">05</span><h4>Visa &amp; Start</h4></div>
-    <div class="m2-split-right"><p>Investorvisum, Arbeitsvisum, Golden Visa — wir beantragen alles. Danach bleiben wir an Ihrer Seite: Buchhaltungspartner, Bürolösungen, lokales Netzwerk in Dubai.</p></div>
+  <div class="m2-step">
+    <div class="m2-step-left"><span class="m2-step-num">05</span><h4>Visa &amp; Start</h4></div>
+    <div class="m2-step-right"><p>Investorvisum, Arbeitsvisum, Golden Visa — wir beantragen alles. Danach bleiben wir an Ihrer Seite: Buchhaltungspartner, Bürolösungen, lokales Netzwerk in Dubai.</p></div>
   </div>
 
-  <div class="m2-highlight">
-    <div class="m2-highlight-num">300+</div>
-    <div class="m2-highlight-text">
+  <div class="m2-green-banner">
+    <div class="m2-green-banner-num">300+</div>
+    <div class="m2-green-banner-text">
       <h3>Gründungen. Persönlich begleitet.</h3>
-      <p>Karim Loreti Hassan hat über 300 Gründer aus Europa durch diesen Prozess begleitet. Jede Gründung ist einzigartig — die Erfahrung, die er mitbringt, nicht.</p>
+      <p>Karim Loreti Hassan hat über 300 Gründer aus dem deutschsprachigen Raum durch diesen Prozess geführt. Jede Gründung ist einzigartig — die Erfahrung, die er mitbringt, nicht.</p>
     </div>
   </div>
 
-  <div class="m2-karim-full">
-    <div class="m2-karim-avatar">KLH</div>
+  <div class="m2-karim">
+    <div class="m2-karim-box">KLH</div>
     <div class="m2-karim-info">
-      <span class="tag">Über Karim</span>
+      <span class="tag">Ihr Berater</span>
       <h3>Karim Loreti Hassan</h3>
-      <p>In Rom geboren, in Berlin aufgewachsen — mit ägyptischen Wurzeln und Familie in den VAE. 20+ Jahre Unternehmer. 15+ Jahre Marketing. Büro: Dubai Silicon Oasis, IFZA Business Park.</p>
-      <p>Er spricht Ihre Sprache. Wortwörtlich: Deutsch, Englisch, Arabisch, Italienisch.</p>
-      <div style="margin-top:14px;">
+      <p>In Rom geboren, in Berlin aufgewachsen. 20+ Jahre Unternehmer, 15+ Jahre Marketing. Er kennt beide Welten und spricht Deutsch, Englisch, Arabisch und Italienisch.</p>
+      <a href="tel:+971503730906">📞 +971 50 373 09 06</a>
+      <a href="https://wa.me/971503730906">💬 WhatsApp</a>
+      <a href="https://startuphilfedubai.de">🌐 Website</a>
+    </div>
+  </div>
+
+  <div class="m2-cta">
+    <h2>30 Minuten. Ihr kompletter Plan.</h2>
+    <p>Buchen Sie Ihr kostenloses Gespräch mit Karim. In 30 Minuten wissen Sie exakt, welche Struktur passt und wie schnell es gehen kann.</p>
+    <a class="m2-btn" href="https://startuphilfedubai.de">Termin mit Karim buchen</a>
+    <span class="m2-cta-note">Kostenlos · Auf Deutsch · Video oder Telefon</span>
+  </div>
+
+  <div class="m2-footer">
+    <div class="m2-footer-txt">© 2026 Startup Hilfe Dubai · Dubai Silicon Oasis, IFZA Business Park<br><a href="#">Abmelden</a> · <a href="#">Einstellungen</a></div>
+    <div class="m2-socials"><a class="m2-soc" href="#">in</a><a class="m2-soc" href="#">▶</a><a class="m2-soc" href="#">✕</a></div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════
+     MAIL 3 — Cards & Testimonials
+══════════════════════════════ -->
+<div class="divider"><span>Ausgabe 03 &nbsp;·&nbsp; Erfolgsgeschichten</span></div>
+<div class="email m3">
+
+  <div class="m3-header">
+    <div class="logo"><div class="lc"><div class="li"><div class="ld ld1"></div><div class="ld ld2"></div><div class="lb"></div></div></div><div class="ln-dark">Startup Hilfe<br>Dubai</div></div>
+    <div class="m3-header-right">Ausgabe 03 · 2026</div>
+  </div>
+
+  <div class="m3-hero">
+    <img src="https://images.unsplash.com/photo-1546412414-e1885e51cfa5?w=1200&q=90" alt="Dubai Sonnenuntergang">
+    <div class="m3-hero-overlay"></div>
+    <div class="m3-hero-content">
+      <span class="tag">Echte Geschichten</span>
+      <h1>Andere haben es<br>geschafft.<br>Jetzt sind Sie dran.</h1>
+    </div>
+  </div>
+
+  <div class="m3-stats">
+    <div class="m3-stat"><span class="m3-stat-val">300+</span><span class="m3-stat-lbl">Gründungen</span></div>
+    <div class="m3-stat"><span class="m3-stat-val">26</span><span class="m3-stat-lbl">Tage Ø</span></div>
+    <div class="m3-stat"><span class="m3-stat-val">20+</span><span class="m3-stat-lbl">Jahre</span></div>
+    <div class="m3-stat"><span class="m3-stat-val">4</span><span class="m3-stat-lbl">Sprachen</span></div>
+  </div>
+
+  <div class="m3-section" style="padding-bottom:24px;">
+    <span class="tag">Was unsere Gründer sagen</span>
+    <h2>Hinter jeder Firma steckt eine Geschichte.</h2>
+    <p>Zahlen sind gut. Menschen sind besser. Hier berichten Gründer, die den Schritt gewagt haben — und was sich seitdem verändert hat.</p>
+  </div>
+
+  <div class="m3-cards">
+    <div class="m3-card">
+      <span class="m3-card-quote">"</span>
+      <p class="m3-card-text">Ich hatte Bedenken, dass die Gründung in Dubai ein bürokratischer Albtraum wird. Mit Karim war es das genaue Gegenteil. Er koordinierte alles, begleitete mich durch jeden Schritt und ließ mich nie im Dunkeln. Nach drei Wochen war meine Firma eingetragen. Heute mache ich meinen Umsatz steuerfrei — und bereue jeden Tag, den ich gewartet habe.</p>
+      <div class="m3-card-author">
+        <div class="m3-card-avatar">MS</div>
+        <div class="m3-card-meta"><strong>Marco S.</strong><span>IT-Unternehmer · München → Dubai</span></div>
+      </div>
+    </div>
+    <div class="m3-card">
+      <span class="m3-card-quote">"</span>
+      <p class="m3-card-text">Als E-Commerce-Gründerin hatte ich sehr spezifische Anforderungen. Karim hat nicht einfach eine Standardlösung verkauft — er hat sich mein Business angehört und eine Struktur gefunden, die perfekt passt. Das Netzwerk, das er mir geöffnet hat, war allein schon Gold wert. Meine Firma wächst schneller als je zuvor.</p>
+      <div class="m3-card-author">
+        <div class="m3-card-avatar">SM</div>
+        <div class="m3-card-meta"><strong>Sarah M.</strong><span>E-Commerce · Wien → Dubai</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="m3-karim">
+    <div class="m3-karim-photo">KLH</div>
+    <div class="m3-karim-text">
+      <span class="tag">Gründer &amp; Berater</span>
+      <h3>Karim Loreti Hassan</h3>
+      <p>In Rom geboren, in Berlin aufgewachsen. Ägyptische Wurzeln, Familie in den VAE. 20+ Jahre Unternehmer, 15+ Jahre Marketing.</p>
+      <p><em>"Ich helfe Gründern, die Fehler zu vermeiden, die ich selbst gemacht habe."</em></p>
+      <div class="m3-karim-links">
         <a href="tel:+971503730906">📞 +971 50 373 09 06</a>
         <a href="https://wa.me/971503730906">💬 WhatsApp</a>
         <a href="https://startuphilfedubai.de">🌐 startuphilfedubai.de</a>
@@ -341,103 +434,22 @@ body { background:#111; font-family:'Inter',sans-serif; padding:60px 20px; }
     </div>
   </div>
 
-  <div class="m2-cta">
-    <h2>Bereit für den ersten Schritt?</h2>
-    <p>30 Minuten mit Karim. Sie erfahren exakt, welche Struktur passt, was es kostet und wie schnell es geht.</p>
-    <a class="m2-btn" href="https://startuphilfedubai.de">Termin mit Karim buchen</a>
-    <span class="m2-cta-note">Kostenlos &nbsp;·&nbsp; Auf Deutsch &nbsp;·&nbsp; Per Video oder Telefon</span>
-  </div>
-
-  <div class="m2-footer">
-    <div class="m2-footer-text">© 2026 Startup Hilfe Dubai<br>Dubai Silicon Oasis, IFZA Business Park, UAE<br><a href="#">Abmelden</a> · <a href="#">Einstellungen</a></div>
-    <div class="m2-socials"><a class="m2-soc" href="#">in</a><a class="m2-soc" href="#">▶</a><a class="m2-soc" href="#">✕</a></div>
-  </div>
-</div>
-
-
-<!-- ══════════════════════════════
-     MAIL 3 — Warm & Personal
-══════════════════════════════ -->
-<div class="divider"><span>Ausgabe 03 &nbsp;·&nbsp; Erfolgsgeschichten</span></div>
-<div class="email m3">
-
-  <div class="m3-header">
-    <div class="logo"><div class="lc"><div class="li"><div class="ld ld1"></div><div class="ld ld2"></div><div class="lb"></div></div></div><div class="ln" style="color:#1a1208;">Startup Hilfe<br>Dubai</div></div>
-    <div class="m3-header-right">Ausgabe 03 · 2026</div>
-  </div>
-
-  <div class="m3-hero">
-    <img src="https://images.unsplash.com/photo-1546412414-e1885e51cfa5?w=1200&q=90" alt="Dubai Sonnenuntergang">
-    <div class="m3-hero-caption">
-      <span class="tag">Echte Geschichten</span>
-      <h1>Andere haben es geschafft.<br>Jetzt sind Sie dran.</h1>
-    </div>
-  </div>
-
-  <div class="m3-stats-row">
-    <div class="m3-stat"><span class="m3-stat-val">300+</span><span class="m3-stat-lbl">Gründungen</span></div>
-    <div class="m3-stat"><span class="m3-stat-val">26</span><span class="m3-stat-lbl">Tage Ø</span></div>
-    <div class="m3-stat"><span class="m3-stat-val">20+</span><span class="m3-stat-lbl">Jahre Erfahrung</span></div>
-    <div class="m3-stat"><span class="m3-stat-val">4</span><span class="m3-stat-lbl">Sprachen</span></div>
-  </div>
-
-  <div class="m3-intro">
-    <span class="tag">Was unsere Gründer sagen</span>
-    <h2>Hinter jeder Firma steckt eine Geschichte.</h2>
-    <p>Zahlen sind gut. Menschen sind besser. Hier sind zwei Gründer, die mit Startup Hilfe Dubai den Schritt in die VAE gewagt haben — und was sich seitdem verändert hat.</p>
-  </div>
-
-  <div class="m3-quote-block">
-    <div class="m3-quote">
-      <p class="m3-quote-text">Ich hatte Bedenken, dass die Gründung in Dubai ein bürokratischer Albtraum wird. Mit Karim war es das genaue Gegenteil. Er hat alles koordiniert, mich durch jeden Schritt begleitet und mich nie im Dunkeln gelassen. Nach drei Wochen war meine Firma eingetragen. Heute mache ich meinen kompletten Umsatz steuerfrei — und bereue jeden Tag, den ich gewartet habe.</p>
-      <div class="m3-quote-author">
-        <div class="m3-quote-avatar">MS</div>
-        <div class="m3-quote-meta"><strong>Marco S.</strong><span>IT-Unternehmer &nbsp;·&nbsp; München → Dubai</span></div>
-      </div>
-    </div>
-    <div class="m3-quote">
-      <p class="m3-quote-text">Als E-Commerce-Gründerin hatte ich spezifische Anforderungen an Bankkonto, Zahlungsanbieter und Logistik. Karim hat nicht einfach eine Standardlösung verkauft — er hat sich mein Business wirklich angehört. Das Netzwerk, das er mir geöffnet hat, war allein schon Gold wert. Meine Firma wächst schneller als je zuvor.</p>
-      <div class="m3-quote-author">
-        <div class="m3-quote-avatar">SM</div>
-        <div class="m3-quote-meta"><strong>Sarah M.</strong><span>E-Commerce &nbsp;·&nbsp; Wien → Dubai</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="m3-karim-section">
-    <span class="tag">Wer ist Karim?</span>
-    <div class="m3-karim-inner">
-      <div class="m3-karim-photo">KLH</div>
-      <div class="m3-karim-info">
-        <h3>Karim Loreti Hassan</h3>
-        <p>In Rom geboren, in Berlin aufgewachsen. Ägyptischer Vater, italienische Mutter, Familie in London und den VAE. 20+ Jahre Unternehmer. 15+ Jahre Marketing.</p>
-        <p><em>"Ich helfe Gründern, die Fehler zu vermeiden, die ich selbst gemacht habe. Wer zu mir kommt, geht den kürzesten Weg."</em></p>
-        <div class="m3-karim-links">
-          <a href="tel:+971503730906">📞 +971 50 373 09 06</a>
-          <a href="https://wa.me/971503730906">💬 WhatsApp</a>
-          <a href="https://startuphilfedubai.de">🌐 Website</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div class="m3-why">
     <span class="tag">Was Dubai wirklich ausmacht</span>
     <h2>Es ist nicht nur die Steuer.</h2>
-    <p>Es ist die Kombination: ein stabiles politisches System, eine Regierung, die Unternehmertum aktiv fördert, und eine Gesellschaft aus 185 Nationalitäten. Hier sind Ihre Kunden, Investoren und Partner — alles an einem Ort.</p>
-    <div class="m3-pullquote"><strong>Karim versteht beide Welten.</strong> Die europäische Mentalität rund um Rechtssicherheit und Transparenz. Und die Spielregeln in Dubai. Diese Kombination ist selten — und Ihr Vorteil.</div>
-    <p>Ob Freezone, Mainland oder Offshore — für jedes Geschäftsmodell gibt es die optimale Struktur. Startup Hilfe Dubai findet sie für Sie: klar, sicher, ohne Umwege.</p>
+    <p>Es ist die Kombination: ein stabiles System, eine Regierung, die Unternehmertum fördert, und 185 Nationalitäten an einem Ort. Ihre Kunden, Investoren und Partner — alle in Reichweite.</p>
+    <div class="m3-pullquote"><strong>Karim versteht beide Welten:</strong> die europäische Mentalität rund um Rechtssicherheit und die Spielregeln in Dubai. Diese Kombination ist selten — und Ihr Vorteil.</div>
   </div>
 
   <div class="m3-cta">
     <h2>Ihre Geschichte<br>beginnt jetzt.</h2>
-    <p>Ein kostenloses Gespräch mit Karim. In 30 Minuten wissen Sie, wie Ihr Weg nach Dubai aussieht.</p>
+    <p>Ein kostenloses Gespräch mit Karim. 30 Minuten. Kein Druck. Klare Antworten — auf Deutsch.</p>
     <a class="m3-btn" href="https://startuphilfedubai.de">Jetzt Erfolgsgeschichte starten</a>
-    <span class="m3-cta-note">Kostenlos &nbsp;·&nbsp; Unverbindlich &nbsp;·&nbsp; Auf Deutsch</span>
+    <span class="m3-cta-note">Kostenlos · Unverbindlich · Auf Deutsch</span>
   </div>
 
   <div class="m3-footer">
-    <div class="m3-footer-text">© 2026 Startup Hilfe Dubai<br>Dubai Silicon Oasis, IFZA Business Park, UAE<br><a href="#">Abmelden</a> · <a href="#">Einstellungen</a></div>
+    <div class="m3-footer-txt">© 2026 Startup Hilfe Dubai · Dubai Silicon Oasis, IFZA Business Park<br><a href="#">Abmelden</a> · <a href="#">Einstellungen</a></div>
     <div class="m3-socials"><a class="m3-soc" href="#">in</a><a class="m3-soc" href="#">▶</a><a class="m3-soc" href="#">✕</a></div>
   </div>
 </div>
